@@ -30,15 +30,15 @@ move-reino-bible/
 
 | Módulo | Status |
 |--------|--------|
-| Bible Reader | ✅ MVP |
-| Parallel Bible | ✅ MVP |
+| Bible Reader | ✅ Fase 1 — leitura, notas, favoritos, cópia |
+| Parallel Bible | ✅ Fase 1 — até 4 colunas sincronizadas |
 | Search Lab | ✅ MVP |
-| Original Languages | ✅ UI demo |
-| Strong & Concordance | ✅ UI demo |
+| Original Languages | ✅ Funcional (STEP + interlinear PT) |
+| Strong & Concordance | ✅ Funcional |
 | Study Builder | ✅ MVP |
-| Thematic Chains | ✅ UI demo |
-| Theology RAG | ✅ MVP |
-| AI Study Assistant | ✅ MVP (mock LLM) |
+| Thematic Chains | 🟡 UI + API (importação Torrey pendente) |
+| Theology RAG | 🟡 MVP (indexação vetorial pendente) |
+| AI Study Assistant | 🟡 MVP (mock LLM; OpenAI parcial) |
 | Admin Editorial | ✅ CLI |
 | Library (notas/favoritos) | ✅ UI |
 

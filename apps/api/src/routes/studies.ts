@@ -78,7 +78,30 @@ export async function studyRoutes(app: FastifyInstance) {
   app.post("/notes", async (req, reply) => {
     const parsed = noteSchema.safeParse(req.body);
     if (!parsed.success) return reply.status(400).send({ error: parsed.error.flatten() });
-    return prisma.userNote.create({ data: parsed.data });
+    const userId = await resolveStudyUserId(parsed.data.userId);
+    const existing = await prisma.userNote.findFirst({
+      where: {
+        userId,
+        bookId: parsed.data.bookId,
+        chapter: parsed.data.chapter,
+        verse: parsed.data.verse,
+      },
+    });
+    if (existing) {
+      return prisma.userNote.update({
+        where: { id: existing.id },
+        data: { content: parsed.data.content },
+      });
+    }
+    return prisma.userNote.create({
+      data: {
+        userId,
+        bookId: parsed.data.bookId,
+        chapter: parsed.data.chapter,
+        verse: parsed.data.verse,
+        content: parsed.data.content,
+      },
+    });
   });
 
   app.get("/favorites", async (req) => {
@@ -92,18 +115,52 @@ export async function studyRoutes(app: FastifyInstance) {
   app.post("/favorites", async (req, reply) => {
     const body = req.body as { userId: string; bookId: string; chapter: number; verse: number };
     if (!body.userId) return reply.status(400).send({ error: "userId obrigatório" });
+    const userId = await resolveStudyUserId(body.userId);
     return prisma.userFavorite.upsert({
       where: {
         userId_bookId_chapter_verse: {
-          userId: body.userId,
+          userId,
           bookId: body.bookId,
           chapter: body.chapter,
           verse: body.verse,
         },
       },
       update: {},
-      create: body,
+      create: {
+        userId,
+        bookId: body.bookId,
+        chapter: body.chapter,
+        verse: body.verse,
+      },
     });
+  });
+
+  app.delete("/favorites", async (req, reply) => {
+    const q = req.query as {
+      userId?: string;
+      bookId?: string;
+      chapter?: string;
+      verse?: string;
+    };
+    if (!q.userId || !q.bookId || !q.chapter || !q.verse) {
+      return reply.status(400).send({ error: "userId, bookId, chapter e verse são obrigatórios" });
+    }
+    const userId = await resolveStudyUserId(q.userId);
+    try {
+      await prisma.userFavorite.delete({
+        where: {
+          userId_bookId_chapter_verse: {
+            userId,
+            bookId: q.bookId,
+            chapter: Number(q.chapter),
+            verse: Number(q.verse),
+          },
+        },
+      });
+      return { ok: true };
+    } catch {
+      return reply.status(404).send({ error: "Favorito não encontrado" });
+    }
   });
 
   app.get<{ Params: { id: string } }>("/:id", async (req, reply) => {

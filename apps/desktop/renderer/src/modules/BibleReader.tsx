@@ -8,6 +8,7 @@ import { SelectableVerseCard } from "../components/SelectableVerseCard";
 import { VerseSelectionBar } from "../components/VerseSelectionBar";
 import { useBibleBooks } from "../hooks/useBibleBooks";
 import { useChapterOriginal } from "../hooks/useChapterOriginal";
+import { useBibleUserMarks } from "../hooks/useBibleUserMarks";
 import { originalScriptLabel } from "../lib/original-language";
 import type { OriginalTokenDto } from "@mrb/shared-types";
 
@@ -42,6 +43,8 @@ export function BibleReader() {
     true
   );
   const scriptLabel = originalLanguage ? originalScriptLabel(originalLanguage) : "original";
+
+  const { noteByVerse, isFavoriteVerse } = useBibleUserMarks(currentBook, currentChapter);
 
   const getVerseTokens = (verse: number): OriginalTokenDto[] => {
     const raw = tokensByVerse as Record<string, OriginalTokenDto[]>;
@@ -104,6 +107,8 @@ export function BibleReader() {
               verseTokens={getVerseTokens(v.verse)}
               showInterlinear={showInterlinearLayer}
               originalLanguage={originalLanguage}
+              hasNote={Boolean(noteByVerse(v.verse))}
+              isFavorite={isFavoriteVerse(v.verse)}
             />
           ))}
         </div>

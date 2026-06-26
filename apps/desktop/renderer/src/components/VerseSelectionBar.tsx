@@ -1,4 +1,5 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   Sparkles,
   FileText,
@@ -11,13 +12,18 @@ import {
   X,
   GripVertical,
   Check,
+  Star,
+  StickyNote,
 } from "lucide-react";
 import type { AppModule } from "@mrb/shared-types";
 import { Button, Badge } from "@mrb/ui-kit";
 import { useAppStore } from "../store/appStore";
 import { formatVerseForClipboard, setVerseDragData } from "../lib/verse-context";
 import { useChapterOriginal } from "../hooks/useChapterOriginal";
+import { useBibleUserMarks } from "../hooks/useBibleUserMarks";
 import { originalScriptLabel } from "../lib/original-language";
+import { api } from "../lib/api";
+import { DEMO_STUDY_USER } from "../lib/study-utils";
 
 const ACTIONS: Array<{
   module: AppModule;
@@ -38,6 +44,9 @@ const FLASH_MS = 1400;
 export function VerseSelectionBar({ compact }: { compact?: boolean }) {
   const [flashModule, setFlashModule] = useState<AppModule | null>(null);
   const [copied, setCopied] = useState(false);
+  const [noteOpen, setNoteOpen] = useState(false);
+  const [noteText, setNoteText] = useState("");
+  const queryClient = useQueryClient();
 
   const {
     selectedVerseContext,
@@ -57,6 +66,62 @@ export function VerseSelectionBar({ compact }: { compact?: boolean }) {
     ctx?.chapter ?? 0,
     !!ctx
   );
+  const { noteByVerse, isFavoriteVerse } = useBibleUserMarks(
+    ctx?.bookOsisId ?? "",
+    ctx?.chapter ?? 0
+  );
+
+  const existingNote = ctx ? noteByVerse(ctx.verse) : undefined;
+  const isFavorite = ctx ? isFavoriteVerse(ctx.verse) : false;
+
+  useEffect(() => {
+    setNoteText(existingNote?.content ?? "");
+    setNoteOpen(false);
+  }, [ctx?.bookOsisId, ctx?.chapter, ctx?.verse, existingNote?.content]);
+
+  const invalidateMarks = () => {
+    void queryClient.invalidateQueries({ queryKey: ["bible-notes"] });
+    void queryClient.invalidateQueries({ queryKey: ["bible-favorites"] });
+  };
+
+  const saveNoteMutation = useMutation({
+    mutationFn: () => {
+      if (!ctx || !noteText.trim()) return Promise.reject(new Error("Nota vazia"));
+      return api.saveBibleNote({
+        userId: DEMO_STUDY_USER,
+        bookId: ctx.bookOsisId,
+        chapter: ctx.chapter,
+        verse: ctx.verse,
+        content: noteText.trim(),
+      });
+    },
+    onSuccess: () => {
+      invalidateMarks();
+      setNoteOpen(false);
+    },
+  });
+
+  const toggleFavoriteMutation = useMutation({
+    mutationFn: async () => {
+      if (!ctx) return;
+      if (isFavorite) {
+        await api.removeBibleFavorite(
+          DEMO_STUDY_USER,
+          ctx.bookOsisId,
+          ctx.chapter,
+          ctx.verse
+        );
+      } else {
+        await api.addBibleFavorite({
+          userId: DEMO_STUDY_USER,
+          bookId: ctx.bookOsisId,
+          chapter: ctx.chapter,
+          verse: ctx.verse,
+        });
+      }
+    },
+    onSuccess: invalidateMarks,
+  });
 
   const flash = useCallback((module: AppModule) => {
     setFlashModule(module);
@@ -152,6 +217,23 @@ export function VerseSelectionBar({ compact }: { compact?: boolean }) {
         ))}
         <Button
           variant="ghost"
+          className={isFavorite ? "verse-action-btn--flash" : ""}
+          onClick={() => toggleFavoriteMutation.mutate()}
+          disabled={toggleFavoriteMutation.isPending}
+          title={isFavorite ? "Remover favorito" : "Favoritar versículo"}
+        >
+          <Star size={14} fill={isFavorite ? "currentColor" : "none"} />
+        </Button>
+        <Button
+          variant="ghost"
+          className={noteOpen || existingNote ? "verse-action-btn--flash" : ""}
+          onClick={() => setNoteOpen((v) => !v)}
+          title="Nota pessoal"
+        >
+          <StickyNote size={14} />
+        </Button>
+        <Button
+          variant="ghost"
           className={copied ? "verse-action-btn--flash" : ""}
           onClick={handleCopy}
           title="Copiar versículo"
@@ -162,6 +244,29 @@ export function VerseSelectionBar({ compact }: { compact?: boolean }) {
           <X size={14} />
         </Button>
       </div>
+      {noteOpen && !compact && (
+        <div className="verse-selection-bar__note">
+          <textarea
+            className="verse-selection-bar__note-input"
+            value={noteText}
+            onChange={(e) => setNoteText(e.target.value)}
+            placeholder="Escreva uma nota sobre este versículo..."
+            rows={3}
+          />
+          <div className="verse-selection-bar__note-actions">
+            <Button
+              variant="gold"
+              onClick={() => saveNoteMutation.mutate()}
+              disabled={!noteText.trim() || saveNoteMutation.isPending}
+            >
+              Salvar nota
+            </Button>
+            <Button variant="ghost" onClick={() => setNoteOpen(false)}>
+              Cancelar
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -28,6 +28,8 @@ interface SelectableVerseCardProps {
   verseTokens?: OriginalTokenDto[];
   showInterlinear?: boolean;
   originalLanguage?: OriginalScript | null;
+  hasNote?: boolean;
+  isFavorite?: boolean;
 }
 
 export function SelectableVerseCard({
@@ -41,6 +43,8 @@ export function SelectableVerseCard({
   verseTokens = [],
   showInterlinear = false,
   originalLanguage = null,
+  hasNote = false,
+  isFavorite = false,
 }: SelectableVerseCardProps) {
   const {
     selectedVerseContext,
@@ -121,6 +125,8 @@ export function SelectableVerseCard({
         verseNumber={verseNumber}
         text={text}
         selected={selected}
+        highlighted={isFavorite}
+        hasNote={hasNote}
         onClick={handleClick}
         onVerseNumberClick={hasOriginalData ? openVocab : undefined}
       />

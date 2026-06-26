@@ -173,7 +173,23 @@ export const api = {
   getVersificationStatus: () =>
     fetchApi<{ total: number; indexed: boolean }>("/versification/status"),
 
-  getNotes: (userId: string) => fetchApi<unknown[]>(`/studies/notes?userId=${userId}`),
+  getNotes: (userId: string) => fetchApi<BibleNoteRecord[]>(`/studies/notes?userId=${userId}`),
+  saveBibleNote: (data: {
+    userId: string;
+    bookId: string;
+    chapter: number;
+    verse: number;
+    content: string;
+  }) => fetchApi<BibleNoteRecord>("/studies/notes", { method: "POST", body: JSON.stringify(data) }),
+  getBibleFavorites: (userId: string) =>
+    fetchApi<BibleFavoriteRecord[]>(`/studies/favorites?userId=${userId}`),
+  addBibleFavorite: (data: { userId: string; bookId: string; chapter: number; verse: number }) =>
+    fetchApi<BibleFavoriteRecord>("/studies/favorites", { method: "POST", body: JSON.stringify(data) }),
+  removeBibleFavorite: (userId: string, bookId: string, chapter: number, verse: number) =>
+    fetchApi<{ ok: boolean }>(
+      `/studies/favorites?userId=${encodeURIComponent(userId)}&bookId=${encodeURIComponent(bookId)}&chapter=${chapter}&verse=${verse}`,
+      { method: "DELETE" }
+    ),
   getRagDocuments: () =>
     fetchApi<Array<{ id: string; title: string; author?: string; tradition?: string; _count?: { chunks: number } }>>(
       "/rag/documents"
@@ -572,6 +588,26 @@ export interface RagSearchResponse {
   count: number;
   results: RagSearchResult[];
   citations: Array<{ title: string; author?: string; excerpt: string; confidence: number }>;
+}
+
+export interface BibleNoteRecord {
+  id: string;
+  userId: string;
+  bookId: string;
+  chapter: number;
+  verse: number;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface BibleFavoriteRecord {
+  id: string;
+  userId: string;
+  bookId: string;
+  chapter: number;
+  verse: number;
+  createdAt: string;
 }
 
 export interface LibraryNoteRecord {
