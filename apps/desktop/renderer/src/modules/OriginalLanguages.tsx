@@ -12,6 +12,7 @@ import {
   originalDatasetLabel,
   tokenGlossPt,
 } from "../lib/original-language";
+import { morphologyColorClass, morphologyLabelPt } from "../lib/morphology-colors";
 
 export function OriginalLanguages() {
   const {
@@ -123,7 +124,14 @@ export function OriginalLanguages() {
                 {activeToken.morphologyCode && (
                   <>
                     <span style={{ color: "var(--mrb-text-muted)" }}>Morfologia</span>
-                    <span>{activeToken.morphologyCode}</span>
+                    <span className="original-morph-cell">
+                      <span className={`morph-badge ${morphologyColorClass(activeToken.morphologyCode)}`}>
+                        {activeToken.morphologyCode}
+                      </span>
+                      <span className="original-morph-cell__label">
+                        {morphologyLabelPt(activeToken.morphologyCode)}
+                      </span>
+                    </span>
                   </>
                 )}
                 {activeToken.morphologyExpanded && (

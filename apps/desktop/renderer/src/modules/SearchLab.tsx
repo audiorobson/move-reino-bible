@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { SearchInput, LoadingState, ErrorState, Button, Badge, Card, EmptyState } from "@mrb/ui-kit";
-import { api, type StrongSearchHit } from "../lib/api";
+import { api, type StrongSearchHit, type MorphologySearchHit } from "../lib/api";
 import { useAppStore } from "../store/appStore";
 import { VerseDropZone } from "../components/VerseDropZone";
+import { useBibleBooks } from "../hooks/useBibleBooks";
 import {
   detectWordSearchKind,
   resolveSearchScopes,
@@ -11,10 +12,11 @@ import {
 } from "../lib/word-search";
 
 const SEARCH_SCOPES: Array<{ id: WordSearchScope; label: string; hint: string }> = [
-  { id: "auto", label: "Automático", hint: "Detecta PT, EN ou Strong" },
+  { id: "auto", label: "Automático", hint: "Detecta PT, EN, Strong ou morfologia" },
   { id: "bible_pt", label: "Bíblia PT", hint: "Bíblia Livre (português)" },
   { id: "bible_en", label: "Bíblia EN", hint: "King James (inglês)" },
   { id: "strong", label: "Strong", hint: "Número, lema ou definição" },
+  { id: "morphology", label: "Morfologia", hint: "Código grego/hebraico (ex.: V-PAI-3S, HR/Ncfsa)" },
 ];
 
 function StrongHitCard({
@@ -37,6 +39,36 @@ function StrongHitCard({
   );
 }
 
+function MorphHitCard({
+  hit,
+  bookName,
+  onOpen,
+}: {
+  hit: MorphologySearchHit;
+  bookName: string;
+  onOpen: () => void;
+}) {
+  return (
+    <button type="button" className="word-search-morph-hit" onClick={onOpen}>
+      <div className="word-search-morph-hit__head">
+        <Badge variant="gold">{hit.morphologyCode ?? "—"}</Badge>
+        <Badge variant="blue">{hit.testament}</Badge>
+        {hit.strongNumber && <Badge variant="rag">{hit.strongNumber}</Badge>}
+      </div>
+      <strong className="word-search-morph-hit__ref">
+        {bookName} {hit.chapter}:{hit.verse}
+      </strong>
+      <span className="word-search-morph-hit__surface">{hit.surfaceForm}</span>
+      {(hit.glossPt ?? hit.glossEn) && (
+        <p className="word-search-morph-hit__gloss">{hit.glossPt ?? hit.glossEn}</p>
+      )}
+      {hit.morphologyExpanded && hit.morphologyExpanded !== hit.morphologyCode && (
+        <p className="word-search-morph-hit__expanded">{hit.morphologyExpanded}</p>
+      )}
+    </button>
+  );
+}
+
 export function SearchLab() {
   const {
     setLocation,
@@ -47,6 +79,9 @@ export function SearchLab() {
     wordSearchSubmitted,
     setWordSearchQuery,
   } = useAppStore();
+
+  const { data: books = [] } = useBibleBooks();
+  const bookName = (osisId: string) => books.find((b) => b.osisId === osisId)?.namePt ?? osisId;
 
   const [query, setQuery] = useState(wordSearchQuery);
   const [submitted, setSubmitted] = useState(wordSearchSubmitted);
@@ -78,8 +113,15 @@ export function SearchLab() {
     enabled: Boolean(submitted && scopes?.strong),
   });
 
-  const isLoading = biblePtQuery.isLoading || bibleEnQuery.isLoading || strongQuery.isLoading;
-  const error = biblePtQuery.error ?? bibleEnQuery.error ?? strongQuery.error;
+  const morphologyQuery = useQuery({
+    queryKey: ["search", "morphology", submitted, scope],
+    queryFn: () => api.searchMorphology(submitted, { limit: 40 }),
+    enabled: Boolean(submitted && scopes?.morphology),
+  });
+
+  const isLoading =
+    biblePtQuery.isLoading || bibleEnQuery.isLoading || strongQuery.isLoading || morphologyQuery.isLoading;
+  const error = biblePtQuery.error ?? bibleEnQuery.error ?? strongQuery.error ?? morphologyQuery.error;
 
   const handleSearch = () => {
     const trimmed = query.trim();
@@ -97,14 +139,15 @@ export function SearchLab() {
   const ptResults = biblePtQuery.data?.results ?? [];
   const enResults = bibleEnQuery.data?.results ?? [];
   const strongResults = strongQuery.data?.results ?? [];
-  const totalResults = ptResults.length + enResults.length + strongResults.length;
+  const morphResults = morphologyQuery.data?.results ?? [];
+  const totalResults = ptResults.length + enResults.length + strongResults.length + morphResults.length;
 
   return (
     <div className="word-search-lab">
       <div className="bible-header">
         <h2>Buscar palavra</h2>
         <p>
-          Pesquise em português, inglês, número Strong (ex.: G3056, H430) ou referência bíblica (João 3:16)
+          Pesquise em português, inglês, Strong (G3056), morfologia (V-PAI-3S, HR/Ncfsa) ou referência (João 3:16)
         </p>
       </div>
 
@@ -124,7 +167,7 @@ export function SearchLab() {
         <SearchInput
           value={query}
           onChange={setQuery}
-          placeholder="Ex: amor, faith, G3056, palavra, João 3:16..."
+          placeholder="Ex: amor, G3056, V-PAI-3S, HR/Ncfsa, João 3:16..."
           onSubmit={handleSearch}
         />
         <Button variant="primary" onClick={handleSearch}>
@@ -151,6 +194,7 @@ export function SearchLab() {
           Consulta: <strong>{submitted}</strong>
           {detectedKind === "strong" && <Badge variant="gold">Strong</Badge>}
           {detectedKind === "reference" && <Badge variant="blue">Referência</Badge>}
+          {detectedKind === "morphology" && <Badge variant="ai">Morfologia</Badge>}
           {detectedKind === "bible" && <Badge variant="rag">Palavra</Badge>}
         </p>
       )}
@@ -173,6 +217,24 @@ export function SearchLab() {
           <div className="word-search-strong-list">
             {strongResults.map((hit) => (
               <StrongHitCard key={hit.id} hit={hit} onSelect={openStrongLookup} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {submitted && morphResults.length > 0 && (
+        <section className="word-search-section">
+          <h3 className="word-search-section__title">
+            Morfologia (STEP) <Badge variant="ai">{morphResults.length}</Badge>
+          </h3>
+          <div className="word-search-morph-list">
+            {morphResults.map((hit) => (
+              <MorphHitCard
+                key={hit.id}
+                hit={hit}
+                bookName={bookName(hit.bookId)}
+                onOpen={() => openVerse(hit.bookId, hit.chapter, hit.verse)}
+              />
             ))}
           </div>
         </section>

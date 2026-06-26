@@ -1,4 +1,5 @@
 import type { FastifyInstance } from "fastify";
+import { z } from "zod";
 import { prisma } from "../plugins/prisma.js";
 import {
   getVerseOriginalTokens,
@@ -6,7 +7,14 @@ import {
   getStrongOccurrences,
   getChapterOriginalAvailability,
   getChapterOriginalTokens,
+  searchMorphology,
 } from "@mrb/content-importers";
+
+const morphologySearchSchema = z.object({
+  q: z.string().min(1),
+  testament: z.enum(["OT", "NT"]).optional(),
+  limit: z.coerce.number().max(100).default(40),
+});
 
 export async function originalRoutes(app: FastifyInstance) {
   app.get("/status", async () => getOriginalTokenStats(prisma));
@@ -62,5 +70,14 @@ export async function originalRoutes(app: FastifyInstance) {
     const limit = q.limit ? parseInt(q.limit, 10) : 50;
     const occurrences = await getStrongOccurrences(prisma, number.toUpperCase(), limit);
     return { strongNumber: number.toUpperCase(), count: occurrences.length, occurrences };
+  });
+
+  app.get("/morphology/search", async (req, reply) => {
+    const parsed = morphologySearchSchema.safeParse(req.query);
+    if (!parsed.success) return reply.status(400).send({ error: parsed.error.flatten() });
+    return searchMorphology(prisma, parsed.data.q, {
+      testament: parsed.data.testament,
+      limit: parsed.data.limit,
+    });
   });
 }

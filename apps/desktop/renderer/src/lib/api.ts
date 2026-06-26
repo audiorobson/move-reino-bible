@@ -160,6 +160,12 @@ export const api = {
     ),
   getOriginalStatus: () =>
     fetchApi<{ totalTokens: number; books: number; datasets: string[] }>("/original/status"),
+  searchMorphology: (q: string, options?: { testament?: "OT" | "NT"; limit?: number }) => {
+    const params = new URLSearchParams({ q });
+    if (options?.testament) params.set("testament", options.testament);
+    if (options?.limit) params.set("limit", String(options.limit));
+    return fetchApi<MorphologySearchResponse>(`/original/morphology/search?${params}`);
+  },
 
   getChapterVersification: (
     book: string,
@@ -345,6 +351,7 @@ export interface StrongDetailResult {
   lexicon: StrongSearchHit | null;
   related: StrongSearchHit[];
   occurrences: number;
+  bookDistribution: Array<{ bookId: string; count: number }>;
   tokens: Array<{
     id: string;
     bookId: string;
@@ -362,6 +369,27 @@ export interface StrongLookupResult {
   lexicon: LexiconEntryRecord | null;
   occurrences: number;
   tokens: unknown[];
+}
+
+export interface MorphologySearchHit {
+  id: string;
+  bookId: string;
+  chapter: number;
+  verse: number;
+  surfaceForm: string;
+  lemma: string | null;
+  strongNumber: string | null;
+  morphologyCode: string | null;
+  morphologyExpanded: string | null;
+  glossEn: string | null;
+  glossPt: string | null;
+  testament: string;
+}
+
+export interface MorphologySearchResponse {
+  query: string;
+  count: number;
+  results: MorphologySearchHit[];
 }
 
 export interface VerseTokensResponse {

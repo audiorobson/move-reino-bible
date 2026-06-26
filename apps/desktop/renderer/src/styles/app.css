@@ -3661,3 +3661,144 @@
   color: var(--text-muted);
   text-align: center;
 }
+
+/* ─── Morfologia: cores gramaticais ─── */
+.morph-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.morph-badge--noun { background: rgba(18, 110, 175, 0.18); color: var(--mr-blue-500); }
+.morph-badge--verb { background: rgba(209, 160, 88, 0.18); color: var(--mr-gold-600); }
+.morph-badge--adjective { background: rgba(63, 168, 120, 0.16); color: var(--rag-green); }
+.morph-badge--pronoun { background: rgba(124, 92, 255, 0.16); color: var(--ai-purple); }
+.morph-badge--preposition { background: rgba(47, 128, 200, 0.14); color: var(--info); }
+.morph-badge--conjunction { background: rgba(201, 74, 74, 0.14); color: var(--danger); }
+.morph-badge--particle { background: rgba(141, 154, 173, 0.16); color: var(--text-muted-dark); }
+.morph-badge--article { background: rgba(7, 81, 136, 0.12); color: var(--mr-blue-700); }
+.morph-badge--adverb { background: rgba(214, 161, 61, 0.14); color: var(--warning); }
+.morph-badge--other { background: rgba(255, 255, 255, 0.06); color: var(--text-secondary-dark); }
+
+.interlinear-token-detail__morph {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.interlinear-token-detail__morph-label,
+.original-morph-cell__label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.interlinear-token-detail__morph-expanded {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary-dark);
+  line-height: 1.45;
+}
+
+.original-morph-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ─── Strong: distribuição por livro ─── */
+.strong-book-chart {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strong-book-chart__row {
+  display: grid;
+  grid-template-columns: minmax(72px, 28%) 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.strong-book-chart__label {
+  font-size: 12px;
+  color: var(--text-secondary-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.strong-book-chart__bar-wrap {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.strong-book-chart__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--mr-blue-700), var(--mr-gold-600));
+  border-radius: 999px;
+}
+
+.strong-book-chart__count {
+  font-size: 11px;
+  color: var(--text-muted);
+  min-width: 24px;
+  text-align: right;
+}
+
+/* ─── Search Lab: morfologia ─── */
+.word-search-morph-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.word-search-morph-hit {
+  text-align: left;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-dark);
+  background: var(--card-background);
+  cursor: pointer;
+  transition: border-color var(--duration-short), box-shadow var(--duration-short);
+}
+
+.word-search-morph-hit:hover {
+  border-color: var(--border-gold-soft);
+  box-shadow: var(--shadow-gold-glow);
+}
+
+.word-search-morph-hit__head {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.word-search-morph-hit__ref {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.word-search-morph-hit__surface {
+  font-family: var(--font-greek);
+  font-size: 15px;
+}
+
+.word-search-morph-hit__gloss,
+.word-search-morph-hit__expanded {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}

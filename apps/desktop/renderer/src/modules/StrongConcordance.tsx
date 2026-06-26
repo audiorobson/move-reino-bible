@@ -126,6 +126,29 @@ function StrongDetailPanel({ number }: { number: string }) {
         </div>
       </Card>
 
+      {data.bookDistribution.length > 0 && (
+        <Card style={{ marginTop: 12 }}>
+          <h4 style={{ margin: "0 0 10px", fontSize: 13, color: "var(--text-secondary)" }}>
+            Distribuição por livro
+          </h4>
+          <ul className="strong-book-chart">
+            {data.bookDistribution.slice(0, 12).map((row) => {
+              const max = data.bookDistribution[0]?.count ?? 1;
+              const width = Math.max(8, Math.round((row.count / max) * 100));
+              return (
+                <li key={row.bookId} className="strong-book-chart__row">
+                  <span className="strong-book-chart__label">{bookName(row.bookId)}</span>
+                  <div className="strong-book-chart__bar-wrap">
+                    <div className="strong-book-chart__bar" style={{ width: `${width}%` }} />
+                  </div>
+                  <span className="strong-book-chart__count">{row.count}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </Card>
+      )}
+
       {data.related.length > 0 && (
         <Card style={{ marginTop: 12 }}>
           <h4 style={{ margin: "0 0 8px", fontSize: 13, color: "var(--text-secondary)" }}>

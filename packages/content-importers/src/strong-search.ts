@@ -19,6 +19,7 @@ export interface StrongDetailResult {
   lexicon: StrongSearchHit | null;
   related: StrongSearchHit[];
   occurrences: number;
+  bookDistribution: Array<{ bookId: string; count: number }>;
   tokens: Array<{
     id: string;
     bookId: string;
@@ -208,7 +209,7 @@ export async function getStrongDetail(
     take: 8,
   });
 
-  const [occurrenceCount, tokens] = await Promise.all([
+  const [occurrenceCount, tokens, byBook] = await Promise.all([
     prisma.originalToken.count({ where: { strongNumber } }),
     prisma.originalToken.findMany({
       where: { strongNumber },
@@ -225,6 +226,12 @@ export async function getStrongDetail(
         glossEn: true,
       },
     }),
+    prisma.originalToken.groupBy({
+      by: ["bookId"],
+      where: { strongNumber },
+      _count: { id: true },
+      orderBy: { _count: { id: "desc" } },
+    }),
   ]);
 
   return {
@@ -232,6 +239,10 @@ export async function getStrongDetail(
     lexicon: { ...mapEntry(lexicon), score: 1 },
     related: related.map((r) => ({ ...mapEntry(r), score: 0.5 })),
     occurrences: occurrenceCount,
+    bookDistribution: byBook.map((row) => ({
+      bookId: row.bookId,
+      count: row._count.id,
+    })),
     tokens,
   };
 }

@@ -6,6 +6,7 @@ import {
   type OriginalScript,
 } from "../lib/original-language";
 import { StrongNumberLink } from "./StrongNumberLink";
+import { morphologyColorClass, morphologyLabelPt } from "../lib/morphology-colors";
 
 interface InterlinearTokenDetailProps {
   token: OriginalTokenDto;
@@ -68,6 +69,20 @@ export function InterlinearTokenDetail({
         <p className="interlinear-token-detail__strong-row">
           <StrongNumberLink number={token.strongNumber} className="interlinear-token-detail__strong" />
         </p>
+      )}
+
+      {token.morphologyCode && (
+        <div className="interlinear-token-detail__morph">
+          <span className={`morph-badge ${morphologyColorClass(token.morphologyCode)}`}>
+            {token.morphologyCode}
+          </span>
+          <span className="interlinear-token-detail__morph-label">
+            {morphologyLabelPt(token.morphologyCode)}
+          </span>
+          {token.morphologyExpanded && token.morphologyExpanded !== token.morphologyCode && (
+            <p className="interlinear-token-detail__morph-expanded">{token.morphologyExpanded}</p>
+          )}
+        </div>
       )}
     </div>
   );

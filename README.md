@@ -95,6 +95,15 @@ pnpm import:bible --file data/bibles/local/example-john1.json
 Repositório de textos: `data/bibles/` — veja [data/bibles/README.md](./data/bibles/README.md)
 
 ```bash
+# Importar textos originais STEP (NT completo)
+pnpm import:step:nt
+
+# Importar Antigo Testamento STEP
+pnpm import:step:ot
+
+# Amostra rápida (João 1)
+pnpm import:step:sample
+
 # API (porta 4000)
 pnpm dev:api
 
@@ -114,6 +123,8 @@ pnpm dev:desktop
 | `pnpm test` | Testes |
 | `pnpm db:migrate` | Migrations Prisma |
 | `pnpm db:seed` | Seed (66 livros + João 1) |
+| `pnpm import:step:nt` | Importar NT grego (STEP TAGNT) |
+| `pnpm import:step:ot` | Importar AT hebraico (STEP TAHOT) |
 
 ## Segurança Electron
 
@@ -133,7 +144,7 @@ Nenhum conteúdo bíblico real é incluído sem licença rastreável. O seed usa
 Ver `Move_Reino_Bible_DEV_SPEC.md` para especificação completa.
 
 - **Fase 1:** ✅ MVP bíblico — leitura, busca, comparação, notas, favoritos
-- **Fase 2 (atual):** Originais, Strong, léxico
+- **Fase 2 (atual):** Originais STEP, Strong, busca morfológica, concordância por livro
 - **Fase 3:** Estudos completos, exportação
 - **Fase 4:** IA com provedores reais
 - **Fase 5:** RAG vetorial completo

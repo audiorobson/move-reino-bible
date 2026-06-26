@@ -1,10 +1,24 @@
+import { useQuery } from "@tanstack/react-query";
 import { BookOpen, Columns2, Search, Sparkles } from "lucide-react";
 import { Button, Card, Badge, GoldDivider } from "@mrb/ui-kit";
 import { AppLogo } from "../components/AppLogo";
 import { useAppStore } from "../store/appStore";
+import { api } from "../lib/api";
 
 export function Dashboard() {
   const { setActiveModule, setCompareMode, setLocation, currentBook, currentChapter } = useAppStore();
+
+  const { data: originalStatus } = useQuery({
+    queryKey: ["original-status"],
+    queryFn: () => api.getOriginalStatus(),
+    staleTime: 60_000,
+  });
+
+  const { data: strongStats } = useQuery({
+    queryKey: ["strong-stats"],
+    queryFn: () => api.getStrongStats(),
+    staleTime: 60_000,
+  });
 
   const shortcuts = [
     {
@@ -69,6 +83,22 @@ export function Dashboard() {
           <div className="dashboard-status__row">
             <span>Status IA</span>
             <Badge variant="ai">Pronto</Badge>
+          </div>
+          <div className="dashboard-status__row">
+            <span>Textos originais (STEP)</span>
+            <Badge variant={originalStatus?.totalTokens ? "blue" : "gold"}>
+              {originalStatus?.totalTokens
+                ? `${originalStatus.totalTokens.toLocaleString("pt-BR")} tokens · ${originalStatus.books} livros`
+                : "Importar pnpm import:step:nt"}
+            </Badge>
+          </div>
+          <div className="dashboard-status__row">
+            <span>Léxico Strong</span>
+            <Badge variant={strongStats?.indexed ? "rag" : "gold"}>
+              {strongStats?.indexed
+                ? `${strongStats.total.toLocaleString("pt-BR")} entradas`
+                : "Pendente"}
+            </Badge>
           </div>
           <div className="dashboard-status__row">
             <span>Biblioteca RAG</span>

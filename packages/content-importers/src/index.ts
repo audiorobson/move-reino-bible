@@ -464,3 +464,9 @@ export {
   getChapterOriginalTokens,
   type ChapterTokensByVerse,
 } from "./original-language.js";
+export {
+  searchMorphology,
+  isMorphologyQuery,
+  type MorphologySearchHit,
+  type MorphologySearchResult,
+} from "./morphology-search.js";
