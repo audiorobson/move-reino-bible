@@ -1,0 +1,6 @@
+# Confissão de Fé Batista de 1689
+## Capítulo 2: Capítulo 2 — De Deus e da Santíssima Trindade
+
+O Senhor nosso Deus é o único Deus vivo e verdadeiro, cujo subsistir é em si mesmo e infinito em seu ser e perfeições. É pura espíritualidade, invisível, sem corpo, partes ou paixões, imutável, imenso, eterno, incompreensível, onipotente, onisciente, santíssimo, livre e absoluto, fazendo todas as coisas conforme o conselho de sua vontade imutável, para sua própria glória. É amorioso, gracioso, misericordioso, longânimo, abundante em bondade e verdade, perdoando a iniquidade, transgressão e pecado; o recompensador dos que o buscam diligentemente, e ao mesmo tempo justíssimo e terrível nos seus juízos, odiando todo pecado e que de modo algum terá por inocente o culpado.
+
+Neste único Deus subsistem três pessoas: o Pai, o Filho e o Espírito Santo. São da mesma substância, iguais em poder e glória, coeternas e coessenciais. O Pai não é de ninguém, nem por geração nem por processão; o Filho é eternamente gerado do Pai; o Espírito Santo procede eternamente do Pai e do Filho.

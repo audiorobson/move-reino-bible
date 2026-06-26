@@ -1,0 +1,59 @@
+# Suplemento (XP)
+## Capítulo 79: Whether those who are schismatics, heretics, excommunicate, suspended or
+
+degraded have the use of the keys?
+Objection 1: It would seem that those who are schismatics, heretics,
+excommunicate, suspended or degraded have the use of the keys. For just
+as the power of the keys results from orders, so does the power of
+consecration. But the above cannot lose the use of the power of
+consecration, since if they do consecrate it is valid, though they sin
+in doing so. Therefore neither can they lose the use of the keys.
+Objection 2: Further, any active spiritual power in one who has the use
+of his free-will can be exercised by him when he wills. Now the power
+of the keys remains in the aforesaid, for, since it is only conferred
+with orders, they would have to be reordained when they return to the
+Church. Therefore, since it is an active power, they can exercise it
+when they will.
+Objection 3: Further, spiritual grace is hindered by guilt more than by
+punishment. Now excommunication, suspension and degradation are
+punishments. Therefore, since a man does not lose the use of the keys
+on account of guilt, it seems that he does not lose it on account of
+the aforesaid.
+On the contrary, Augustine says (Tract. cxxi in Joan.) that the
+"charity of the Church forgives sins." Now it is the charity of the
+Church which unites its members. Since therefore the above are
+disunited from the Church, it seems that they have not the use of the
+keys in remitting sins.
+Further, no man is absolved from sin by sinning. Now it is a sin for
+anyone to seek absolution of his sins from the above, for he disobeys
+the Church in so doing. Therefore he cannot be absolved by them: and so
+the same conclusion follows.
+I answer that, In all the above the power of the keys remains as to its
+essence, but its use is hindered on account of the lack of matter. For
+since the use of the keys requires in the user authority over the
+person on whom they are used, as stated above ([4877]Q[17], A[2], ad
+2), the proper matter on whom one can exercise the use of the keys is a
+man under one's authority. And since it is by appointment of the Church
+that one man has authority over another, so a man may be deprived of
+his authority over another by his ecclesiastical superiors.
+Consequently, since the Church deprives heretics, schismatics and the
+like, by withdrawing their subjects from them either altogether or in
+some respect, in so far as they are thus deprived, they cannot have the
+use of the keys.
+Reply to Objection 1: The matter of the sacrament of the Eucharist, on
+which the priest exercises his power, is not a man but wheaten bread,
+and in Baptism, the matter is simply a man. Wherefore, just as, were a
+heretic to be without wheaten bread, he could not consecrate, so
+neither can a prelate absolve if he be deprived of his authority, yet
+he can baptize and consecrate, albeit to his own damnation.
+Reply to Objection 2: The assertion is true, provided matter be not
+lacking as it is in the case in point.
+Reply to Objection 3: Sin, of itself, does not remove matter, as
+certain punishments do: so that punishment is a hindrance not because
+it is contrary to the effect, but for the reason stated.
+OF THOSE ON WHOM THE POWER OF THE KEYS CAN BE EXERCISED (THREE ARTICLES)
+We must now consider those on whom the power of the keys can be
+exercised. Under this head there are three points of inquiry:
+(1) Whether a priest can use the key, which he has, on any man?
+(2) Whether a priest can always absolve his subject?
+(3) Whether anyone can use the keys on his superior?

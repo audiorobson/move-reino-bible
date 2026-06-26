@@ -1,0 +1,998 @@
+{
+  "bookId": "gill-divindade-doutrinaria",
+  "title": "Corpo de Divindade Doutrinária",
+  "author": "John Gill (1697-1771)",
+  "generatedAt": "2026-06-18T14:40:05.540Z",
+  "chapterCount": 105,
+  "volumes": [
+    {
+      "roman": "I",
+      "label": "Livro I",
+      "chapterIds": [
+        "livro-i-cap-1",
+        "livro-i-cap-2",
+        "livro-i-cap-3",
+        "livro-i-cap-4",
+        "livro-i-cap-5",
+        "livro-i-cap-6",
+        "livro-i-cap-7",
+        "livro-i-cap-8",
+        "livro-i-cap-9",
+        "livro-i-cap-10",
+        "livro-i-cap-11",
+        "livro-i-cap-12",
+        "livro-i-cap-13",
+        "livro-i-cap-14",
+        "livro-i-cap-15",
+        "livro-i-cap-16",
+        "livro-i-cap-17",
+        "livro-i-cap-18",
+        "livro-i-cap-19",
+        "livro-i-cap-20",
+        "livro-i-cap-21",
+        "livro-i-cap-22",
+        "livro-i-cap-23",
+        "livro-i-cap-24",
+        "livro-i-cap-25",
+        "livro-i-cap-26",
+        "livro-i-cap-27",
+        "livro-i-cap-28",
+        "livro-i-cap-29",
+        "livro-i-cap-30",
+        "livro-i-cap-31"
+      ]
+    },
+    {
+      "roman": "II",
+      "label": "Livro II",
+      "chapterIds": [
+        "livro-ii-cap-1",
+        "livro-ii-cap-2",
+        "livro-ii-cap-3",
+        "livro-ii-cap-4",
+        "livro-ii-cap-5",
+        "livro-ii-cap-6",
+        "livro-ii-cap-7",
+        "livro-ii-cap-9",
+        "livro-ii-cap-10",
+        "livro-ii-cap-11",
+        "livro-ii-cap-12",
+        "livro-ii-cap-13",
+        "livro-ii-cap-14",
+        "livro-ii-cap-15",
+        "livro-ii-cap-16"
+      ]
+    },
+    {
+      "roman": "III",
+      "label": "Livro III",
+      "chapterIds": [
+        "livro-iii-cap-1",
+        "livro-iii-cap-2",
+        "livro-iii-cap-3",
+        "livro-iii-cap-4",
+        "livro-iii-cap-5",
+        "livro-iii-cap-6",
+        "livro-iii-cap-7",
+        "livro-iii-cap-8",
+        "livro-iii-cap-9",
+        "livro-iii-cap-10",
+        "livro-iii-cap-11",
+        "livro-iii-cap-12",
+        "livro-iii-cap-13"
+      ]
+    },
+    {
+      "roman": "IV",
+      "label": "Livro IV",
+      "chapterIds": [
+        "livro-iv-cap-1",
+        "livro-iv-cap-2",
+        "livro-iv-cap-3",
+        "livro-iv-cap-4",
+        "livro-iv-cap-5",
+        "livro-iv-cap-6",
+        "livro-iv-cap-7"
+      ]
+    },
+    {
+      "roman": "V",
+      "label": "Livro V",
+      "chapterIds": [
+        "livro-v-cap-1",
+        "livro-v-cap-2",
+        "livro-v-cap-3",
+        "livro-v-cap-4",
+        "livro-v-cap-5",
+        "livro-v-cap-6",
+        "livro-v-cap-7",
+        "livro-v-cap-8",
+        "livro-v-cap-9",
+        "livro-v-cap-10",
+        "livro-v-cap-11",
+        "livro-v-cap-12",
+        "livro-v-cap-13",
+        "livro-v-cap-14"
+      ]
+    },
+    {
+      "roman": "VI",
+      "label": "Livro VI",
+      "chapterIds": [
+        "livro-vi-cap-1",
+        "livro-vi-cap-2",
+        "livro-vi-cap-3",
+        "livro-vi-cap-4",
+        "livro-vi-cap-5",
+        "livro-vi-cap-6",
+        "livro-vi-cap-7",
+        "livro-vi-cap-8",
+        "livro-vi-cap-10",
+        "livro-vi-cap-11",
+        "livro-vi-cap-12",
+        "livro-vi-cap-13",
+        "livro-vi-cap-14",
+        "livro-vi-cap-15"
+      ]
+    },
+    {
+      "roman": "VII",
+      "label": "Livro VII",
+      "chapterIds": [
+        "livro-vii-cap-1",
+        "livro-vii-cap-2",
+        "livro-vii-cap-3",
+        "livro-vii-cap-4",
+        "livro-vii-cap-5",
+        "livro-vii-cap-6",
+        "livro-vii-cap-7",
+        "livro-vii-cap-8",
+        "livro-vii-cap-9",
+        "livro-vii-cap-10",
+        "livro-vii-cap-11"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "livro-i-cap-1",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 1,
+      "title": "Da Existência de Deus",
+      "wordCount": 7571
+    },
+    {
+      "id": "livro-i-cap-2",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 2,
+      "title": "Das Sagradas Escrituras",
+      "wordCount": 12251
+    },
+    {
+      "id": "livro-i-cap-3",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 3,
+      "title": "Dos Nomes de Deus",
+      "wordCount": 3821
+    },
+    {
+      "id": "livro-i-cap-4",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 4,
+      "title": "Da Natureza de Deus",
+      "wordCount": 3968
+    },
+    {
+      "id": "livro-i-cap-5",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 5,
+      "title": "Dos Atributos de Deus em Geral e de sua Imutabilidade em Particular.",
+      "wordCount": 5123
+    },
+    {
+      "id": "livro-i-cap-6",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 6,
+      "title": "Da Infinitude de Deus, Sua Onipresença e Eternidade.",
+      "wordCount": 7757
+    },
+    {
+      "id": "livro-i-cap-7",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 7,
+      "title": "Da Vida de Deus.",
+      "wordCount": 3097
+    },
+    {
+      "id": "livro-i-cap-8",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 8,
+      "title": "Da Onipotência de Deus.",
+      "wordCount": 4163
+    },
+    {
+      "id": "livro-i-cap-9",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 9,
+      "title": "Da Onisciência de Deus",
+      "wordCount": 4628
+    },
+    {
+      "id": "livro-i-cap-10",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 10,
+      "title": "Da Sabedoria de Deus",
+      "wordCount": 5722
+    },
+    {
+      "id": "livro-i-cap-11",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 11,
+      "title": "Da Vontade de Deus e Sua Soberania",
+      "wordCount": 6517
+    },
+    {
+      "id": "livro-i-cap-12",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 12,
+      "title": "Do Amor de Deus",
+      "wordCount": 2782
+    },
+    {
+      "id": "livro-i-cap-13",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 13,
+      "title": "Da graça de Deus",
+      "wordCount": 3164
+    },
+    {
+      "id": "livro-i-cap-14",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 14,
+      "title": "Da Misericórdia de Deus",
+      "wordCount": 3298
+    },
+    {
+      "id": "livro-i-cap-15",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 15,
+      "title": "Da Longanimidade de Deus.",
+      "wordCount": 2058
+    },
+    {
+      "id": "livro-i-cap-16",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 16,
+      "title": "Da Bondade de Deus.",
+      "wordCount": 2797
+    },
+    {
+      "id": "livro-i-cap-17",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 17,
+      "title": "Da Ira e da Fúria de Deus.",
+      "wordCount": 3935
+    },
+    {
+      "id": "livro-i-cap-18",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 18,
+      "title": "Do Ódio a Deus.",
+      "wordCount": 1907
+    },
+    {
+      "id": "livro-i-cap-19",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 19,
+      "title": "Da Alegria de Deus.",
+      "wordCount": 1334
+    },
+    {
+      "id": "livro-i-cap-20",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 20,
+      "title": "Da Santidade de Deus.",
+      "wordCount": 2744
+    },
+    {
+      "id": "livro-i-cap-21",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 21,
+      "title": "Da Justiça ou Retidão de Deus.",
+      "wordCount": 3377
+    },
+    {
+      "id": "livro-i-cap-22",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 22,
+      "title": "Da Veracidade de Deus.",
+      "wordCount": 2319
+    },
+    {
+      "id": "livro-i-cap-23",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 23,
+      "title": "Da Fidelidade de Deus.",
+      "wordCount": 4418
+    },
+    {
+      "id": "livro-i-cap-24",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 24,
+      "title": "Da Suficiência e Perfeição de Deus.",
+      "wordCount": 3054
+    },
+    {
+      "id": "livro-i-cap-25",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 25,
+      "title": "Da Bem-Aventurança de Deus.",
+      "wordCount": 2733
+    },
+    {
+      "id": "livro-i-cap-26",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 26,
+      "title": "Da Unidade de Deus.",
+      "wordCount": 4190
+    },
+    {
+      "id": "livro-i-cap-27",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 27,
+      "title": "De uma Pluralidade na Divindade; Ou, Uma Trindade de Pessoas na Unidade da",
+      "wordCount": 8357
+    },
+    {
+      "id": "livro-i-cap-28",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 28,
+      "title": "Das Relações Pessoais; Ou, Propriedades Relativas que Distinguem as Três",
+      "wordCount": 16316
+    },
+    {
+      "id": "livro-i-cap-29",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 29,
+      "title": "Da Personalidade Distinta e da Divindade do Pai.",
+      "wordCount": 1706
+    },
+    {
+      "id": "livro-i-cap-30",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 30,
+      "title": "Da Personalidade Distinta e da Divindade do Filho.",
+      "wordCount": 4529
+    },
+    {
+      "id": "livro-i-cap-31",
+      "bookRoman": "I",
+      "bookLabel": "Livro I",
+      "chapterNumber": 31,
+      "title": "Da Personalidade Distinta e da Divindade do Espírito Santo.",
+      "wordCount": 3421
+    },
+    {
+      "id": "livro-ii-cap-1",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 1,
+      "title": "Dos Atos e Obras Internos de Deus; E de Seus Decretos em Geral.",
+      "wordCount": 3133
+    },
+    {
+      "id": "livro-ii-cap-2",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 2,
+      "title": "Dos Decretos Especiais de Deus, Relativos às Criaturas Racionais, aos Anjos e",
+      "wordCount": 14052
+    },
+    {
+      "id": "livro-ii-cap-3",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 3,
+      "title": "Do Decreto de Rejeição, de Alguns Anjos e de Alguns Homens.",
+      "wordCount": 5521
+    },
+    {
+      "id": "livro-ii-cap-4",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 4,
+      "title": "Da União Eterna dos Eleitos de Deus com Ele.",
+      "wordCount": 2514
+    },
+    {
+      "id": "livro-ii-cap-5",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 5,
+      "title": "De Outros Atos Eternos e Imanentes em Deus, Particularmente Adoção e",
+      "wordCount": 7003
+    },
+    {
+      "id": "livro-ii-cap-6",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 6,
+      "title": "Do Conselho Eterno entre as Três Pessoas Divinas, concernente à",
+      "wordCount": 3881
+    },
+    {
+      "id": "livro-ii-cap-7",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 7,
+      "title": "Da Aliança Eterna da Graça, entre o Pai, o Filho e o",
+      "wordCount": 10111
+    },
+    {
+      "id": "livro-ii-cap-9",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 9,
+      "title": "Da Parte que o Filho de Deus, a Segunda Pessoa, Desempenhou na Aliança.",
+      "wordCount": 1306
+    },
+    {
+      "id": "livro-ii-cap-10",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 10,
+      "title": "De Cristo, como Cabeça da Aliança dos Eleitos.",
+      "wordCount": 1559
+    },
+    {
+      "id": "livro-ii-cap-11",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 11,
+      "title": "De Cristo, o Mediador da Aliança.",
+      "wordCount": 6262
+    },
+    {
+      "id": "livro-ii-cap-12",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 12,
+      "title": "De Cristo, o Fiador da Aliança.",
+      "wordCount": 3407
+    },
+    {
+      "id": "livro-ii-cap-13",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 13,
+      "title": "De Cristo, o Testador da Aliança.",
+      "wordCount": 2571
+    },
+    {
+      "id": "livro-ii-cap-14",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 14,
+      "title": ": Da Participação do Espírito de Deus na Aliança da Graça.",
+      "wordCount": 2279
+    },
+    {
+      "id": "livro-ii-cap-15",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 15,
+      "title": "Das Propriedades da Aliança da Graça.",
+      "wordCount": 3211
+    },
+    {
+      "id": "livro-ii-cap-16",
+      "bookRoman": "II",
+      "bookLabel": "Livro II",
+      "chapterNumber": 16,
+      "title": "Da",
+      "wordCount": 3823
+    },
+    {
+      "id": "livro-iii-cap-1",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 1,
+      "title": "Da Criação em Geral.",
+      "wordCount": 5123
+    },
+    {
+      "id": "livro-iii-cap-2",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 2,
+      "title": "Da Criação dos Anjos.",
+      "wordCount": 5354
+    },
+    {
+      "id": "livro-iii-cap-3",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 3,
+      "title": ": Da Criação do Homem.",
+      "wordCount": 7674
+    },
+    {
+      "id": "livro-iii-cap-4",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 4,
+      "title": "Da Providência de Deus.",
+      "wordCount": 22240
+    },
+    {
+      "id": "livro-iii-cap-5",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 5,
+      "title": "Da Confirmação dos Anjos Eleitos e da Queda dos Não Eleitos.",
+      "wordCount": 3904
+    },
+    {
+      "id": "livro-iii-cap-6",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 6,
+      "title": "Da Honra e Felicidade do Homem em Estado de Inocência.",
+      "wordCount": 2148
+    },
+    {
+      "id": "livro-iii-cap-7",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 7,
+      "title": "Da Lei Dada a Adão e da Aliança Feita com ele em seu Estado de",
+      "wordCount": 4333
+    },
+    {
+      "id": "livro-iii-cap-8",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 8,
+      "title": "Do",
+      "wordCount": 3823
+    },
+    {
+      "id": "livro-iii-cap-9",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 9,
+      "title": "Da Natureza, Agravamentos e Tristes Efeitos do Pecado do Homem.",
+      "wordCount": 2724
+    },
+    {
+      "id": "livro-iii-cap-10",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 10,
+      "title": "Da Imputação do Pecado de Adão a Toda a Sua Posteridade.",
+      "wordCount": 4935
+    },
+    {
+      "id": "livro-iii-cap-11",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 11,
+      "title": "Da Corrupção da Natureza Humana.",
+      "wordCount": 5847
+    },
+    {
+      "id": "livro-iii-cap-12",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 12,
+      "title": "Dos Pecados e Transgressões Reais.",
+      "wordCount": 3349
+    },
+    {
+      "id": "livro-iii-cap-13",
+      "bookRoman": "III",
+      "bookLabel": "Livro III",
+      "chapterNumber": 13,
+      "title": "Da Punição do Pecado.",
+      "wordCount": 2466
+    },
+    {
+      "id": "livro-iv-cap-1",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 1,
+      "title": "Da Manifestação e Administração da Aliança da Graça.",
+      "wordCount": 2083
+    },
+    {
+      "id": "livro-iv-cap-2",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 2,
+      "title": "Das Manifestações da Aliança da Graça no Estado Patriarcal.",
+      "wordCount": 4968
+    },
+    {
+      "id": "livro-iv-cap-3",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 3,
+      "title": "Das Exibições da Aliança da Graça sob a Dispensação Mosaica.",
+      "wordCount": 2599
+    },
+    {
+      "id": "livro-iv-cap-4",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 4,
+      "title": "Da Aliança da Graça, como Exibida nos Tempos de Davi e dos",
+      "wordCount": 2995
+    },
+    {
+      "id": "livro-iv-cap-5",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 5,
+      "title": "Da Revogação da Antiga Aliança, ou Primeira Administração dela, e da",
+      "wordCount": 4945
+    },
+    {
+      "id": "livro-iv-cap-6",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 6,
+      "title": "Da Lei de Deus.",
+      "wordCount": 4564
+    },
+    {
+      "id": "livro-iv-cap-7",
+      "bookRoman": "IV",
+      "bookLabel": "Livro IV",
+      "chapterNumber": 7,
+      "title": "Do Evangelho.",
+      "wordCount": 3903
+    },
+    {
+      "id": "livro-v-cap-1",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 1,
+      "title": "Da Encarnação de Cristo.",
+      "wordCount": 10050
+    },
+    {
+      "id": "livro-v-cap-2",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 2,
+      "title": "Do Estado de Humilhação de Cristo.",
+      "wordCount": 4958
+    },
+    {
+      "id": "livro-v-cap-3",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 3,
+      "title": "Da Obediência Ativa de Cristo em Seu Estado de Humilhação.",
+      "wordCount": 4238
+    },
+    {
+      "id": "livro-v-cap-4",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 4,
+      "title": "Da Obediência Passiva de Cristo, ou de Seus Sofrimentos e Morte.",
+      "wordCount": 4276
+    },
+    {
+      "id": "livro-v-cap-5",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 5,
+      "title": "Do Sepultamento de Cristo.",
+      "wordCount": 3596
+    },
+    {
+      "id": "livro-v-cap-6",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 6,
+      "title": "Da Ressurreição de Cristo dentre os Mortos.",
+      "wordCount": 4204
+    },
+    {
+      "id": "livro-v-cap-7",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 7,
+      "title": "Da Ascensão de Cristo ao Céu.",
+      "wordCount": 3826
+    },
+    {
+      "id": "livro-v-cap-8",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 8,
+      "title": ": Da Sessão de Cristo à Direita de Deus. Este",
+      "wordCount": 3016
+    },
+    {
+      "id": "livro-v-cap-9",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 9,
+      "title": "Do Ofício Profético de Cristo.",
+      "wordCount": 3108
+    },
+    {
+      "id": "livro-v-cap-10",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 10,
+      "title": "Do Ofício Sacerdotal de Cristo.",
+      "wordCount": 2990
+    },
+    {
+      "id": "livro-v-cap-11",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 11,
+      "title": "Da Intercessão de Cristo.",
+      "wordCount": 3422
+    },
+    {
+      "id": "livro-v-cap-12",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 12,
+      "title": ":",
+      "wordCount": 3021
+    },
+    {
+      "id": "livro-v-cap-13",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 13,
+      "title": "Do Ofício Real de Cristo.",
+      "wordCount": 7725
+    },
+    {
+      "id": "livro-v-cap-14",
+      "bookRoman": "V",
+      "bookLabel": "Livro V",
+      "chapterNumber": 14,
+      "title": "Do Reino Espiritual de Cristo.",
+      "wordCount": 4197
+    },
+    {
+      "id": "livro-vi-cap-1",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 1,
+      "title": "Da Redenção por Cristo.",
+      "wordCount": 2779
+    },
+    {
+      "id": "livro-vi-cap-2",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 2,
+      "title": "Das Causas da Redenção por Cristo.",
+      "wordCount": 3120
+    },
+    {
+      "id": "livro-vi-cap-3",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 3,
+      "title": "Dos Objetivos da Redenção por Cristo.",
+      "wordCount": 5194
+    },
+    {
+      "id": "livro-vi-cap-4",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 4,
+      "title": "Dos Textos das Escrituras que Parecem Favorecer a Redenção Universal.",
+      "wordCount": 7324
+    },
+    {
+      "id": "livro-vi-cap-5",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 5,
+      "title": ":",
+      "wordCount": 10837
+    },
+    {
+      "id": "livro-vi-cap-6",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 6,
+      "title": "Da Propiciação, Expiação e Reconciliação, conforme atribuídas a Cristo.",
+      "wordCount": 3549
+    },
+    {
+      "id": "livro-vi-cap-7",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 7,
+      "title": "Do Perdão dos Pecados.",
+      "wordCount": 7308
+    },
+    {
+      "id": "livro-vi-cap-8",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 8,
+      "title": "Da Justificação.",
+      "wordCount": 19689
+    },
+    {
+      "id": "livro-vi-cap-10",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 10,
+      "title": "Da Liberdade dos Filhos de Deus.",
+      "wordCount": 2884
+    },
+    {
+      "id": "livro-vi-cap-11",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 11,
+      "title": "Da Regeneração.",
+      "wordCount": 8343
+    },
+    {
+      "id": "livro-vi-cap-12",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 12,
+      "title": "Do Chamado Eficaz.",
+      "wordCount": 6251
+    },
+    {
+      "id": "livro-vi-cap-13",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 13,
+      "title": "Da Conversão.",
+      "wordCount": 5664
+    },
+    {
+      "id": "livro-vi-cap-14",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 14,
+      "title": "Da Santificação.",
+      "wordCount": 6233
+    },
+    {
+      "id": "livro-vi-cap-15",
+      "bookRoman": "VI",
+      "bookLabel": "Livro VI",
+      "chapterNumber": 15,
+      "title": "Da Perseverança dos Santos.",
+      "wordCount": 16259
+    },
+    {
+      "id": "livro-vii-cap-1",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 1,
+      "title": "Da Morte do Corpo.",
+      "wordCount": 4905
+    },
+    {
+      "id": "livro-vii-cap-2",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 2,
+      "title": "Da Imortalidade da Alma.",
+      "wordCount": 7219
+    },
+    {
+      "id": "livro-vii-cap-3",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 3,
+      "title": "Do Estado Separado da Alma até a Ressurreição e seu Emprego",
+      "wordCount": 7361
+    },
+    {
+      "id": "livro-vii-cap-4",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 4,
+      "title": "Da Ressurreição do Corpo.",
+      "wordCount": 11101
+    },
+    {
+      "id": "livro-vii-cap-5",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 5,
+      "title": "Da Segunda Vinda de Cristo e Sua Aparição Pessoal.",
+      "wordCount": 7947
+    },
+    {
+      "id": "livro-vii-cap-6",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 6,
+      "title": "Da Conflagração do Universo.",
+      "wordCount": 9004
+    },
+    {
+      "id": "livro-vii-cap-7",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 7,
+      "title": "Dos Novos Céus e da Nova Terra e dos seus Habitantes.",
+      "wordCount": 5535
+    },
+    {
+      "id": "livro-vii-cap-8",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 8,
+      "title": "Do Milênio, ou Reinado Pessoal de Cristo com os Santos na Nova",
+      "wordCount": 19880
+    },
+    {
+      "id": "livro-vii-cap-9",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 9,
+      "title": "Do Juízo Final e Geral.",
+      "wordCount": 8159
+    },
+    {
+      "id": "livro-vii-cap-10",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 10,
+      "title": ": Do Estado Final dos Ímpios no Inferno.",
+      "wordCount": 8057
+    },
+    {
+      "id": "livro-vii-cap-11",
+      "bookRoman": "VII",
+      "bookLabel": "Livro VII",
+      "chapterNumber": 11,
+      "title": "Do Estado Final dos Santos no Céu.",
+      "wordCount": 18232
+    }
+  ]
+}

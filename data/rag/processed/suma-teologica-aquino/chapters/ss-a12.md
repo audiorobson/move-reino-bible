@@ -1,0 +1,95 @@
+# Segunda Parte da Segunda Parte (SS)
+## Capítulo 12: Whether it belongs to the Sovereign Pontiff to draw up a symbol of faith?
+
+Objection 1: It would seem that it does not belong to the Sovereign
+Pontiff to draw up a symbol of faith. For a new edition of the symbol
+becomes necessary in order to explain the articles of faith, as stated
+above [2273](A[9]). Now, in the Old Testament, the articles of faith
+were more and more explained as time went on, by reason of the truth of
+faith becoming clearer through greater nearness to Christ, as stated
+above [2274](A[7]). Since then this reason ceased with the advent of
+the New Law, there is no need for the articles of faith to be more and
+more explicit. Therefore it does not seem to belong to the authority of
+the Sovereign Pontiff to draw up a new edition of the symbol.
+Objection 2: Further, no man has the power to do what is forbidden
+under pain of anathema by the universal Church. Now it was forbidden
+under pain of anathema by the universal Church, to make a new edition
+of the symbol. For it is stated in the acts of the first* council of
+Ephesus (P. ii, Act. 6) that "after the symbol of the Nicene council
+had been read through, the holy synod decreed that it was unlawful to
+utter, write or draw up any other creed, than that which was defined by
+the Fathers assembled at Nicaea together with the Holy Ghost," and this
+under pain of anathema. [*St. Thomas wrote 'first' (expunged by
+Nicolai) to distinguish it from the other council, A.D. 451, known as
+the "Latrocinium" and condemned by the Pope.] The same was repeated in
+the acts of the council of Chalcedon (P. ii, Act. 5). Therefore it
+seems that the Sovereign Pontiff has no authority to publish a new
+edition of the symbol.
+Objection 3: Further, Athanasius was not the Sovereign Pontiff, but
+patriarch of Alexandria, and yet he published a symbol which is sung in
+the Church. Therefore it does not seem to belong to the Sovereign
+Pontiff any more than to other bishops, to publish a new edition of the
+symbol.
+On the contrary, The symbol was drawn us by a general council. Now such
+a council cannot be convoked otherwise than by the authority of the
+Sovereign Pontiff, as stated in the Decretals [*Dist. xvii, Can. 4,5].
+Therefore it belongs to the authority of the Sovereign Pontiff to draw
+up a symbol.
+I answer that, As stated above (OBJ 1), a new edition of the symbol
+becomes necessary in order to set aside the errors that may arise.
+Consequently to publish a new edition of the symbol belongs to that
+authority which is empowered to decide matters of faith finally, so
+that they may be held by all with unshaken faith. Now this belongs to
+the authority of the Sovereign Pontiff, "to whom the more important and
+more difficult questions that arise in the Church are referred," as
+stated in the Decretals [*Dist. xvii, Can. 5]. Hence our Lord said to
+Peter whom he made Sovereign Pontiff (Lk. 22:32): "I have prayed for
+thee," Peter, "that thy faith fail not, and thou, being once converted,
+confirm thy brethren." The reason of this is that there should be but
+one faith of the whole Church, according to 1 Cor. 1:10: "That you all
+speak the same thing, and that there be no schisms among you": and this
+could not be secured unless any question of faith that may arise be
+decided by him who presides over the whole Church, so that the whole
+Church may hold firmly to his decision. Consequently it belongs to the
+sole authority of the Sovereign Pontiff to publish a new edition of the
+symbol, as do all other matters which concern the whole Church, such as
+to convoke a general council and so forth.
+Reply to Objection 1: The truth of faith is sufficiently explicit in
+the teaching of Christ and the apostles. But since, according to 2 Pet.
+3:16, some men are so evil-minded as to pervert the apostolic teaching
+and other doctrines and Scriptures to their own destruction, it was
+necessary as time went on to express the faith more explicitly against
+the errors which arose.
+Reply to Objection 2: This prohibition and sentence of the council was
+intended for private individuals, who have no business to decide
+matters of faith: for this decision of the general council did not take
+away from a subsequent council the power of drawing up a new edition of
+the symbol, containing not indeed a new faith, but the same faith with
+greater explicitness. For every council has taken into account that a
+subsequent council would expound matters more fully than the preceding
+council, if this became necessary through some heresy arising.
+Consequently this belongs to the Sovereign Pontiff, by whose authority
+the council is convoked, and its decision confirmed.
+Reply to Objection 3: Athanasius drew up a declaration of faith, not
+under the form of a symbol, but rather by way of an exposition of
+doctrine, as appears from his way of speaking. But since it contained
+briefly the whole truth of faith, it was accepted by the authority of
+the Sovereign Pontiff, so as to be considered as a rule of faith.
+OF THE ACT OF FAITH (TEN ARTICLES)
+We must now consider the act of faith, and (1) the internal act; (2)
+the external act.
+Under the first head there are ten points of inquiry:
+(1) What is "to believe," which is the internal act of faith?
+(2) In how many ways is it expressed?
+(3) Whether it is necessary for salvation to believe in anything above
+natural reason?
+(4) Whether it is necessary to believe those things that are attainable
+by natural reason?
+(5) Whether it is necessary for salvation to believe certain things
+explicitly?
+(6) Whether all are equally bound to explicit faith?
+(7) Whether explicit faith in Christ is always necessary for salvation?
+(8) Whether it is necessary for salvation to believe in the Trinity
+explicitly?
+(9) Whether the act of faith is meritorious?
+(10) Whether human reason diminishes the merit of faith?

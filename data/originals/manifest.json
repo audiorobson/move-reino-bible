@@ -1,0 +1,62 @@
+{
+  "version": "1.2",
+  "description": "Dados STEPBible-Data (CC BY 4.0) — fork local audiorobson/STEPBible-Data",
+  "sourcesDirectory": "data/raw/stepbible",
+  "attribution": "Dados criados por STEPBible.org / Tyndale House Cambridge (CC BY 4.0)",
+  "sources": [
+    {
+      "id": "TAGNT",
+      "file": "Translators Amalgamated OT+NT/TAGNT Mat-Jhn - Translators Amalgamated Greek NT - STEPBible.org CC-BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "NT grego amalgamado com Strong, morfologia e glossas"
+    },
+    {
+      "id": "TAHOT",
+      "files": [
+        "Translators Amalgamated OT+NT/TAHOT Gen-Deu - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+        "Translators Amalgamated OT+NT/TAHOT Jos-Est - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+        "Translators Amalgamated OT+NT/TAHOT Job-Sng - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+        "Translators Amalgamated OT+NT/TAHOT Isa-Mal - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt"
+      ],
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "AT hebraico amalgamado com Strong, morfologia ETCBC e glossas"
+    },
+    {
+      "id": "TVTMS",
+      "file": "Versification/TVTMS - Translators Versification Traditions with Methodology for Standardisation for Eng+Heb+Lat+Grk+Others - STEPBible.org CC BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "Versificação English / Hebrew / Greek (STEP TVTMS)"
+    },
+    {
+      "id": "TBESG",
+      "file": "Lexicons/TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "Léxico breve Extended Strong grego"
+    },
+    {
+      "id": "TBESH",
+      "file": "Lexicons/TBESH - Translators Brief lexicon of Extended Strongs for Hebrew - STEPBible.org CC BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "Léxico breve Extended Strong hebraico (BDB abreviado)"
+    },
+    {
+      "id": "TEGMC",
+      "file": "Morphology codes/TEGMC - Translators Expansion of Greek Morphhology Codes - STEPBible.org CC BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "Expansão de códigos morfológicos gregos"
+    },
+    {
+      "id": "TEHMC",
+      "file": "Morphology codes/TEHMC - Translators Expansion of Hebrew Morphology Codes - STEPBible.org CC BY.txt",
+      "enabled": true,
+      "license": "CC BY 4.0",
+      "description": "Expansão de códigos morfológicos hebraicos"
+    }
+  ]
+}

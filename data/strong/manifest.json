@@ -1,0 +1,32 @@
+{
+  "version": "1.1",
+  "description": "Catálogo Strong's — concordância e léxico offline",
+  "sourcesDirectory": "data/strong",
+  "indexDirectory": "data/strong/index",
+  "sources": [
+    {
+      "type": "markdown",
+      "file": "sources/strongs.template.md",
+      "enabled": false,
+      "description": "Entradas de demonstração (G3056, H430, G26)"
+    },
+    {
+      "type": "markdown",
+      "file": "strongs-complete.md",
+      "enabled": true,
+      "description": "Dicionário Strong SBB — léxico completo hebraico/grego"
+    },
+    {
+      "type": "markdown",
+      "file": "sources/kjv-strongs-hebrew-pt.md",
+      "enabled": true,
+      "description": "KJV Strong's Hebraico — definições em português (traduzido EN→PT)"
+    },
+    {
+      "type": "markdown",
+      "file": "sources/kjv-strongs-greek-pt.md",
+      "enabled": true,
+      "description": "KJV Strong's Grego — definições em português (traduzido EN→PT)"
+    }
+  ]
+}

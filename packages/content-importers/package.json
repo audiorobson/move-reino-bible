@@ -1,0 +1,30 @@
+{
+  "name": "@mrb/content-importers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/vitest/vitest.mjs run",
+    "lint": "echo ok"
+  },
+  "dependencies": {
+    "@mrb/rag-engine": "workspace:*",
+    "@mrb/shared-types": "workspace:*",
+    "@prisma/client": "^6.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}

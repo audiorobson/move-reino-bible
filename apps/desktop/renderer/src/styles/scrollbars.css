@@ -1,0 +1,57 @@
+/* Scrollbars personalizadas — 2px, escuras */
+.mrb-scroll,
+.sidebar-nav,
+.tool-panel__body,
+.ai-messages,
+.search-results,
+.workspace__column--bible,
+.parallel-main-column {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+.mrb-scroll::-webkit-scrollbar,
+.sidebar-nav::-webkit-scrollbar,
+.tool-panel__body::-webkit-scrollbar,
+.ai-messages::-webkit-scrollbar,
+.search-results::-webkit-scrollbar,
+.workspace__column--bible::-webkit-scrollbar,
+.parallel-main-column::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.mrb-scroll::-webkit-scrollbar-track,
+.sidebar-nav::-webkit-scrollbar-track,
+.tool-panel__body::-webkit-scrollbar-track,
+.ai-messages::-webkit-scrollbar-track,
+.search-results::-webkit-scrollbar-track,
+.workspace__column--bible::-webkit-scrollbar-track,
+.parallel-main-column::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mrb-scroll::-webkit-scrollbar-thumb,
+.sidebar-nav::-webkit-scrollbar-thumb,
+.tool-panel__body::-webkit-scrollbar-thumb,
+.ai-messages::-webkit-scrollbar-thumb,
+.search-results::-webkit-scrollbar-thumb,
+.workspace__column--bible::-webkit-scrollbar-thumb,
+.parallel-main-column::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+.mrb-scroll::-webkit-scrollbar-thumb:hover,
+.sidebar-nav::-webkit-scrollbar-thumb:hover,
+.tool-panel__body::-webkit-scrollbar-thumb:hover,
+.ai-messages::-webkit-scrollbar-thumb:hover,
+.search-results::-webkit-scrollbar-thumb:hover,
+.workspace__column--bible::-webkit-scrollbar-thumb:hover,
+.parallel-main-column::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.mrb-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}

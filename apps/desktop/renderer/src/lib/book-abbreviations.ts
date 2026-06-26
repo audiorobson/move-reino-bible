@@ -1,0 +1,96 @@
+/** Abreviações PT-BR no padrão da barra de seleção (Thompson / concordância clássica). */
+export const BOOK_ABBREVIATIONS: Record<string, string> = {
+  Gen: "Gn",
+  Exod: "Ex",
+  Lev: "Lv",
+  Num: "Nm",
+  Deut: "Dt",
+  Josh: "Js",
+  Judg: "Jz",
+  Ruth: "Rt",
+  "1Sam": "1Sm",
+  "2Sam": "2Sm",
+  "1Kgs": "1Rs",
+  "2Kgs": "2Rs",
+  "1Chr": "1Cr",
+  "2Chr": "2Cr",
+  Ezra: "Ed",
+  Neh: "Ne",
+  Esth: "Et",
+  Job: "Jó",
+  Ps: "Sl",
+  Prov: "Pv",
+  Eccl: "Ec",
+  Song: "Ct",
+  Isa: "Is",
+  Jer: "Jr",
+  Lam: "Lm",
+  Ezek: "Ez",
+  Dan: "Dn",
+  Hos: "Os",
+  Joel: "Jl",
+  Amos: "Am",
+  Obad: "Ob",
+  Jonah: "Jn",
+  Mic: "Mq",
+  Nah: "Na",
+  Hab: "Hc",
+  Zeph: "Sf",
+  Hag: "Ag",
+  Zech: "Zc",
+  Mal: "Ml",
+  Matt: "Mt",
+  Mark: "Mc",
+  Luke: "Lc",
+  John: "Jo",
+  Acts: "At",
+  Rom: "Rm",
+  "1Cor": "1Co",
+  "2Cor": "2Co",
+  Gal: "Gl",
+  Eph: "Ef",
+  Phil: "Fp",
+  Col: "Cl",
+  "1Thess": "1Ts",
+  "2Thess": "2Ts",
+  "1Tim": "1Tm",
+  "2Tim": "2Tm",
+  Titus: "Tt",
+  Phlm: "Fm",
+  Heb: "Hb",
+  Jas: "Tg",
+  "1Pet": "1Pe",
+  "2Pet": "2Pe",
+  "1John": "1Jo",
+  "2John": "2Jo",
+  "3John": "3Jo",
+  Jude: "Jd",
+  Rev: "Ap",
+};
+
+/** Layout em duas fileiras por testamento (espelha barra de seleção.png). */
+export const OT_BOOK_ROWS: string[][] = [
+  [
+    "Gen", "Exod", "Lev", "Num", "Deut", "Josh", "Judg", "Ruth",
+    "1Sam", "2Sam", "1Kgs", "2Kgs", "1Chr", "2Chr", "Ezra", "Neh",
+    "Esth", "Job", "Ps", "Prov", "Eccl",
+  ],
+  [
+    "Song", "Isa", "Jer", "Lam", "Ezek", "Dan", "Hos", "Joel", "Amos", "Obad",
+    "Jonah", "Mic", "Nah", "Hab", "Zeph", "Hag", "Zech", "Mal",
+  ],
+];
+
+export const NT_BOOK_ROWS: string[][] = [
+  [
+    "Matt", "Mark", "Luke", "John", "Acts", "Rom", "1Cor", "2Cor", "Gal", "Eph",
+    "Phil", "Col", "1Thess", "2Thess", "1Tim", "2Tim",
+  ],
+  [
+    "Titus", "Phlm", "Heb", "Jas", "1Pet", "2Pet", "1John", "2John", "3John", "Jude", "Rev",
+  ],
+];
+
+export function getBookAbbreviation(osisId: string): string {
+  return BOOK_ABBREVIATIONS[osisId] ?? osisId.slice(0, 3);
+}

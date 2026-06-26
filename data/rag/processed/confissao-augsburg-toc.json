@@ -1,0 +1,107 @@
+{
+  "bookId": "confissao-augsburg",
+  "title": "Confissão de Augsburgo",
+  "author": "Philip Melanchthon (1530)",
+  "generatedAt": "2026-06-18T02:34:31.693Z",
+  "chapterCount": 10,
+  "volumes": [
+    {
+      "roman": "I",
+      "label": "Confissão de Augsburgo",
+      "chapterIds": [
+        "sec-1",
+        "sec-2",
+        "sec-3",
+        "sec-4",
+        "sec-5",
+        "sec-6",
+        "sec-7",
+        "sec-8",
+        "sec-9",
+        "sec-10"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "sec-1",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 1,
+      "title": "Artigo I — De Deus",
+      "wordCount": 89
+    },
+    {
+      "id": "sec-2",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 2,
+      "title": "Artigo II — Do Pecado Original",
+      "wordCount": 60
+    },
+    {
+      "id": "sec-3",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 3,
+      "title": "Artigo III — Do Filho de Deus",
+      "wordCount": 71
+    },
+    {
+      "id": "sec-4",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 4,
+      "title": "Artigo IV — Da Justificação",
+      "wordCount": 60
+    },
+    {
+      "id": "sec-5",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 5,
+      "title": "Artigo V — Do Ministério da Igreja",
+      "wordCount": 56
+    },
+    {
+      "id": "sec-6",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 6,
+      "title": "Artigo VI — Da Nova Obediência",
+      "wordCount": 38
+    },
+    {
+      "id": "sec-7",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 7,
+      "title": "Artigo VII — Da Igreja",
+      "wordCount": 53
+    },
+    {
+      "id": "sec-8",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 8,
+      "title": "Artigo X — Do Batismo",
+      "wordCount": 28
+    },
+    {
+      "id": "sec-9",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 9,
+      "title": "Artigo XX — Da Fé e das Boas Obras",
+      "wordCount": 51
+    },
+    {
+      "id": "sec-10",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Augsburgo",
+      "chapterNumber": 10,
+      "title": "Artigo XXI — Do Culto dos Santos",
+      "wordCount": 42
+    }
+  ]
+}

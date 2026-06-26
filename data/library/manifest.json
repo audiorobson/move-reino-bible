@@ -1,0 +1,81 @@
+{
+  "version": "1.1",
+  "description": "Catálogo de livros teológicos para leitura — Move Reino Bible",
+  "sourcesDirectory": "data/rag/sources",
+  "processedDirectory": "data/rag/processed",
+  "books": [
+    {
+      "id": "gill-divindade-doutrinaria",
+      "enabled": true,
+      "title": "Corpo de Divindade Doutrinária",
+      "subtitle": "Um Corpo de Divindade Doutrinária",
+      "author": "John Gill (1697-1771)",
+      "tradition": "Batista",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "systematic_theology",
+      "format": "ccel-theology",
+      "sourceFile": "systematic/Divindade Doutrinária_Gill, John (1697-1771).MD",
+      "description": "Sistema completo de teologia batista reformada de John Gill. Domínio público via CCEL.",
+      "ragImport": true
+    },
+    {
+      "id": "suma-teologica-aquino",
+      "enabled": true,
+      "title": "Suma Teológica",
+      "subtitle": "Summa Theologica",
+      "author": "Tomás de Aquino (1225-1274)",
+      "tradition": "Católica",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "systematic_theology",
+      "format": "ccel-summa",
+      "sourceFile": "systematic/Suma_Theologica_Thomas_Aquino.MD",
+      "translatedFile": "systematic/suma-teologica-aquino.md",
+      "description": "Obra magna de Tomás de Aquino — teologia escolástica tomista. Tradução EN→PT (reiniciada após correção do pipeline).",
+      "ragImport": true
+    },
+    {
+      "id": "confissao-batista-1689",
+      "enabled": true,
+      "title": "Confissão de Fé Batista de 1689",
+      "author": "Segunda Confissão de Londres (1689)",
+      "tradition": "Reformada",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "confession",
+      "format": "sections",
+      "sourceFile": "confessions/confissao-batista-1689.md",
+      "description": "Confissão histórica dos batistas particulares reformados. Domínio público.",
+      "ragImport": true
+    },
+    {
+      "id": "catecismo-heidelberg",
+      "enabled": true,
+      "title": "Catecismo de Heidelberg",
+      "author": "Zacharias Ursinus e Caspar Olevianus (1563)",
+      "tradition": "Reformada",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "catechism",
+      "format": "sections",
+      "sourceFile": "confessions/catecismo-heidelberg.md",
+      "description": "Catecismo pastoral da tradição reformada — domínio público.",
+      "ragImport": true
+    },
+    {
+      "id": "confissao-augsburg",
+      "enabled": true,
+      "title": "Confissão de Augsburgo",
+      "author": "Philip Melanchthon (1530)",
+      "tradition": "Luterana",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "confession",
+      "format": "sections",
+      "sourceFile": "confessions/confissao-augsburg.md",
+      "description": "Confissão fundacional do luteranismo. Domínio público.",
+      "ragImport": true
+    }
+  ]
+}

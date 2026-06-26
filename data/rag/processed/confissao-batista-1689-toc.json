@@ -1,0 +1,89 @@
+{
+  "bookId": "confissao-batista-1689",
+  "title": "Confissão de Fé Batista de 1689",
+  "author": "Segunda Confissão de Londres (1689)",
+  "generatedAt": "2026-06-18T02:34:38.594Z",
+  "chapterCount": 8,
+  "volumes": [
+    {
+      "roman": "I",
+      "label": "Confissão de Fé Batista de 1689",
+      "chapterIds": [
+        "sec-1",
+        "sec-2",
+        "sec-3",
+        "sec-4",
+        "sec-5",
+        "sec-6",
+        "sec-7",
+        "sec-8"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "sec-1",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 1,
+      "title": "Capítulo 1 — Das Sagradas Escrituras",
+      "wordCount": 145
+    },
+    {
+      "id": "sec-2",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 2,
+      "title": "Capítulo 2 — De Deus e da Santíssima Trindade",
+      "wordCount": 159
+    },
+    {
+      "id": "sec-3",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 3,
+      "title": "Capítulo 3 — Do Decreto Eterno de Deus",
+      "wordCount": 122
+    },
+    {
+      "id": "sec-4",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 4,
+      "title": "Capítulo 8 — De Cristo, o Mediador",
+      "wordCount": 116
+    },
+    {
+      "id": "sec-5",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 5,
+      "title": "Capítulo 11 — Da Justificação",
+      "wordCount": 75
+    },
+    {
+      "id": "sec-6",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 6,
+      "title": "Capítulo 14 — Da Salvação e da Fé",
+      "wordCount": 77
+    },
+    {
+      "id": "sec-7",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 7,
+      "title": "Capítulo 26 — Da Igreja",
+      "wordCount": 90
+    },
+    {
+      "id": "sec-8",
+      "bookRoman": "I",
+      "bookLabel": "Confissão de Fé Batista de 1689",
+      "chapterNumber": 8,
+      "title": "Capítulo 32 — Do Estado dos Homens Depois da Morte e da Ressurreição dos Mortos",
+      "wordCount": 86
+    }
+  ]
+}

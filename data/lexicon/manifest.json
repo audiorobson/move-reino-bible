@@ -1,0 +1,20 @@
+{
+  "version": "1.1",
+  "description": "Léxicos complementares (HALOT, BDAG, etc.) — indexados para RAG local",
+  "sourcesDirectory": "data/lexicon",
+  "indexDirectory": "data/lexicon/index",
+  "sources": [
+    {
+      "type": "markdown",
+      "file": "The-Hebrew-and-Aramaic-lexicon-of-the-Old-Testament-study-edition-volume-1.md",
+      "enabled": true,
+      "title": "HALOT Vol. 1 — Hebrew and Aramaic Lexicon (Study Edition)",
+      "author": "Koehler, Baumgartner, Stamm et al.",
+      "language": "en",
+      "license": "LICENSE_OK_USER_PROVIDED",
+      "documentType": "lexicon",
+      "reliabilityLevel": "high",
+      "description": "The Hebrew & Aramaic Lexicon of the Old Testament — Volume 1 (Brill study edition)"
+    }
+  ]
+}

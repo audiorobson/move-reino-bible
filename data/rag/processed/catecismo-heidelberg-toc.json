@@ -1,0 +1,71 @@
+{
+  "bookId": "catecismo-heidelberg",
+  "title": "Catecismo de Heidelberg",
+  "author": "Zacharias Ursinus e Caspar Olevianus (1563)",
+  "generatedAt": "2026-06-18T02:34:19.493Z",
+  "chapterCount": 6,
+  "volumes": [
+    {
+      "roman": "I",
+      "label": "Catecismo de Heidelberg",
+      "chapterIds": [
+        "sec-1",
+        "sec-2",
+        "sec-3",
+        "sec-4",
+        "sec-5",
+        "sec-6"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "sec-1",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 1,
+      "title": "Domingo 1 — O único conforto na vida e na morte",
+      "wordCount": 147
+    },
+    {
+      "id": "sec-2",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 2,
+      "title": "Domingo 2 — A lei de Deus e o pecado",
+      "wordCount": 109
+    },
+    {
+      "id": "sec-3",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 3,
+      "title": "Domingo 5 — A justiça de Deus e a expiação",
+      "wordCount": 136
+    },
+    {
+      "id": "sec-4",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 4,
+      "title": "Domingo 7 — A fé e o Espírito Santo",
+      "wordCount": 64
+    },
+    {
+      "id": "sec-5",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 5,
+      "title": "Domingo 23 — Os sacramentos",
+      "wordCount": 133
+    },
+    {
+      "id": "sec-6",
+      "bookRoman": "I",
+      "bookLabel": "Catecismo de Heidelberg",
+      "chapterNumber": 6,
+      "title": "Domingo 32 — A vida eterna",
+      "wordCount": 81
+    }
+  ]
+}

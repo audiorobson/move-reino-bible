@@ -1,0 +1,83 @@
+# Primeira Parte (FP)
+## Capítulo 67: Whether by grace a higher knowledge of God can be obtained than by natural
+
+reason?
+Objection 1: It seems that by grace a higher knowledge of God is not
+obtained than by natural reason. For Dionysius says (De Mystica Theol.
+i) that whoever is the more united to God in this life, is united to
+Him as to one entirely unknown. He says the same of Moses, who
+nevertheless obtained a certain excellence by the knowledge conferred
+by grace. But to be united to God while ignoring of Him "what He is,"
+comes about also by natural reason. Therefore God is not more known to
+us by grace than by natural reason.
+Objection 2: Further, we can acquire the knowledge of divine things by
+natural reason only through the imagination; and the same applies to
+the knowledge given by grace. For Dionysius says (Coel. Hier. i) that
+"it is impossible for the divine ray to shine upon us except as
+screened round about by the many colored sacred veils." Therefore we
+cannot know God more fully by grace than by natural reason.
+Objection 3: Further, our intellect adheres to God by grace of faith.
+But faith does not seem to be knowledge; for Gregory says (Hom. xxvi in
+Ev.) that "things not seen are the objects of faith, and not of
+knowledge." Therefore there is not given to us a more excellent
+knowledge of God by grace.
+On the contrary, The Apostle says that "God hath revealed to us His
+spirit," what "none of the princes of this world knew" (1 Cor. 2:10),
+namely, the philosophers, as the gloss expounds.
+I answer that, We have a more perfect knowledge of God by grace than by
+natural reason. Which is proved thus. The knowledge which we have by
+natural reason contains two things: images derived from the sensible
+objects; and the natural intelligible light, enabling us to abstract
+from them intelligible conceptions.
+Now in both of these, human knowledge is assisted by the revelation of
+grace. For the intellect's natural light is strengthened by the
+infusion of gratuitous light; and sometimes also the images in the
+human imagination are divinely formed, so as to express divine things
+better than those do which we receive from sensible objects, as appears
+in prophetic visions; while sometimes sensible things, or even voices,
+are divinely formed to express some divine meaning; as in the Baptism,
+the Holy Ghost was seen in the shape of a dove, and the voice of the
+Father was heard, "This is My beloved Son" (Mat. 3:17).
+Reply to Objection 1: Although by the revelation of grace in this life
+we cannot know of God "what He is," and thus are united to Him as to
+one unknown; still we know Him more fully according as many and more
+excellent of His effects are demonstrated to us, and according as we
+attribute to Him some things known by divine revelation, to which
+natural reason cannot reach, as, for instance, that God is Three and
+One.
+Reply to Objection 2: From the images either received from sense in the
+natural order, or divinely formed in the imagination, we have so much
+the more excellent intellectual knowledge, the stronger the
+intelligible light is in man; and thus through the revelation given by
+the images a fuller knowledge is received by the infusion of the divine
+light.
+Reply to Objection 3: Faith is a kind of knowledge, inasmuch as the
+intellect is determined by faith to some knowable object. But this
+determination to one object does not proceed from the vision of the
+believer, but from the vision of Him who is believed. Thus as far as
+faith falls short of vision, it falls short of the knowledge which
+belongs to science, for science determines the intellect to one object
+by the vision and understanding of first principles.
+THE NAMES OF GOD (TWELVE ARTICLES)
+After the consideration of those things which belong to the divine
+knowledge, we now proceed to the consideration of the divine names. For
+everything is named by us according to our knowledge of it.
+Under this head, there are twelve points for inquiry:
+(1) Whether God can be named by us?
+(2) Whether any names applied to God are predicated of Him
+substantially?
+(3) Whether any names applied to God are said of Him literally, or are
+all to be taken metaphorically?
+(4) Whether any names applied to God are synonymous?
+(5) Whether some names are applied to God and to creatures univocally
+or equivocally?
+(6) Whether, supposing they are applied analogically, they are applied
+first to God or to creatures?
+(7) Whether any names are applicable to God from time?
+(8) Whether this name "God" is a name of nature, or of the operation?
+(9) Whether this name "God" is a communicable name?
+(10) Whether it is taken univocally or equivocally as signifying God,
+by nature, by participation, and by opinion?
+(11) Whether this name, "Who is," is the supremely appropriate name of
+God?
+(12) Whether affirmative propositions can be formed about God?

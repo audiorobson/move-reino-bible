@@ -1,0 +1,95 @@
+{
+  "version": "1.1",
+  "description": "Catálogo de fontes teológicas para RAG offline — Move Reino Bible",
+  "sourcesDirectory": "data/rag/sources",
+  "processedDirectory": "data/rag/processed",
+  "indexDirectory": "data/rag/index",
+  "chunkDefaults": {
+    "maxChars": 1200,
+    "overlapChars": 150
+  },
+  "sources": [
+    {
+      "type": "markdown",
+      "file": "example-confession.md",
+      "enabled": false,
+      "title": "Confissão de Fé — Exemplo",
+      "author": "Move Reino Bible",
+      "tradition": "Reformada",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "confession",
+      "reliabilityLevel": "demo"
+    },
+    {
+      "type": "markdown",
+      "file": "systematic/Divindade Doutrinária_Gill, John (1697-1771).MD",
+      "enabled": true,
+      "slug": "gill-divindade-doutrinaria",
+      "format": "ccel-theology",
+      "title": "Divindade Doutrinária",
+      "author": "John Gill (1697-1771)",
+      "tradition": "Batista",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "systematic_theology",
+      "reliabilityLevel": "high"
+    },
+    {
+      "type": "markdown",
+      "file": "systematic/suma-teologica-aquino.md",
+      "enabled": true,
+      "slug": "suma-teologica-aquino",
+      "format": "ccel-summa",
+      "title": "Suma Teológica",
+      "author": "Tomás de Aquino (1225-1274)",
+      "tradition": "Católica",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "systematic_theology",
+      "reliabilityLevel": "high"
+    },
+    {
+      "type": "markdown",
+      "file": "confessions/confissao-batista-1689.md",
+      "enabled": true,
+      "slug": "confissao-batista-1689",
+      "format": "sections",
+      "title": "Confissão de Fé Batista de 1689",
+      "author": "Segunda Confissão de Londres (1689)",
+      "tradition": "Reformada",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "confession",
+      "reliabilityLevel": "high"
+    },
+    {
+      "type": "markdown",
+      "file": "confessions/catecismo-heidelberg.md",
+      "enabled": true,
+      "slug": "catecismo-heidelberg",
+      "format": "sections",
+      "title": "Catecismo de Heidelberg",
+      "author": "Zacharias Ursinus e Caspar Olevianus (1563)",
+      "tradition": "Reformada",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "catechism",
+      "reliabilityLevel": "high"
+    },
+    {
+      "type": "markdown",
+      "file": "confessions/confissao-augsburg.md",
+      "enabled": true,
+      "slug": "confissao-augsburg",
+      "format": "sections",
+      "title": "Confissão de Augsburgo",
+      "author": "Philip Melanchthon (1530)",
+      "tradition": "Luterana",
+      "language": "pt-BR",
+      "license": "LICENSE_OK_PUBLIC_DOMAIN",
+      "documentType": "confession",
+      "reliabilityLevel": "high"
+    }
+  ]
+}

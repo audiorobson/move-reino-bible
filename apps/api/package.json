@@ -1,0 +1,38 @@
+{
+  "name": "@mrb/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo ok"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/rate-limit": "^10.2.0",
+    "@mrb/bible-core": "workspace:*",
+    "@mrb/bible-importers": "workspace:*",
+    "@mrb/chain-system": "workspace:*",
+    "@mrb/config": "workspace:*",
+    "@mrb/content-importers": "workspace:*",
+    "@mrb/llm-gateway": "workspace:*",
+    "@mrb/rag-engine": "workspace:*",
+    "@mrb/search-engine": "workspace:*",
+    "@mrb/shared-types": "workspace:*",
+    "@mrb/theology-taxonomy": "workspace:*",
+    "@mrb/translation-gateway": "workspace:*",
+    "@mrb/versification-engine": "workspace:*",
+    "@prisma/client": "^6.8.0",
+    "fastify": "^5.3.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "indexedAt": "2026-06-14T21:50:16.562Z",
+  "versions": [
+    {
+      "abbreviation": "ACF",
+      "documents": 31102,
+      "file": "acf.json"
+    },
+    {
+      "abbreviation": "ALM1911",
+      "documents": 31101,
+      "file": "alm1911.json"
+    },
+    {
+      "abbreviation": "ARA",
+      "documents": 31104,
+      "file": "ara.json"
+    },
+    {
+      "abbreviation": "ARC",
+      "documents": 31105,
+      "file": "arc.json"
+    },
+    {
+      "abbreviation": "AS21",
+      "documents": 31104,
+      "file": "as21.json"
+    },
+    {
+      "abbreviation": "BLIVRE",
+      "documents": 31102,
+      "file": "blivre.json"
+    },
+    {
+      "abbreviation": "BSB",
+      "documents": 31086,
+      "file": "bsb.json"
+    },
+    {
+      "abbreviation": "JFAA",
+      "documents": 31104,
+      "file": "jfaa.json"
+    },
+    {
+      "abbreviation": "KJA",
+      "documents": 31102,
+      "file": "kja.json"
+    },
+    {
+      "abbreviation": "KJF",
+      "documents": 31102,
+      "file": "kjf.json"
+    },
+    {
+      "abbreviation": "KJV",
+      "documents": 31102,
+      "file": "kjv.json"
+    },
+    {
+      "abbreviation": "MENS",
+      "documents": 13055,
+      "file": "mens.json"
+    },
+    {
+      "abbreviation": "NAA",
+      "documents": 31105,
+      "file": "naa.json"
+    },
+    {
+      "abbreviation": "NBV",
+      "documents": 31105,
+      "file": "nbv.json"
+    },
+    {
+      "abbreviation": "NTLH",
+      "documents": 31103,
+      "file": "ntlh.json"
+    },
+    {
+      "abbreviation": "NVI",
+      "documents": 31105,
+      "file": "nvi.json"
+    },
+    {
+      "abbreviation": "TB",
+      "documents": 31100,
+      "file": "tb.json"
+    },
+    {
+      "abbreviation": "VFL",
+      "documents": 31058,
+      "file": "vfl.json"
+    },
+    {
+      "abbreviation": "WEB",
+      "documents": 31103,
+      "file": "web.json"
+    }
+  ],
+  "totalDocuments": 572848
+}

@@ -1,0 +1,14 @@
+appId: com.movereino.bible
+productName: Move Reino Bible
+directories:
+  output: release
+files:
+  - dist/**/*
+  - dist-electron/**/*
+win:
+  target: nsis
+  icon: renderer/public/icon.png
+mac:
+  target: dmg
+linux:
+  target: AppImage

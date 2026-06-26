@@ -1,0 +1,19 @@
+{
+  "version": {
+    "name": "Exemplo Local — João 1",
+    "abbreviation": "LOCAL-JHN1",
+    "language": "pt-BR",
+    "licenseType": "LICENSE_OK_PUBLIC_DOMAIN",
+    "sourceUrl": "data/bibles/local/example-john1.json",
+    "isPublicDomain": true,
+    "attributionRequired": false,
+    "notes": "Arquivo de exemplo para demonstrar o formato JSON aceito pelo importador."
+  },
+  "verses": [
+    { "book": "John", "chapter": 1, "verse": 1, "text": "No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus." },
+    { "book": "John", "chapter": 1, "verse": 2, "text": "Ele estava no princípio com Deus." },
+    { "book": "John", "chapter": 1, "verse": 3, "text": "Todas as coisas foram feitas por ele, e sem ele nada do que foi feito se fez." },
+    { "book": "John", "chapter": 1, "verse": 4, "text": "Nele estava a vida e a vida era a luz dos homens." },
+    { "book": "John", "chapter": 1, "verse": 5, "text": "E a luz resplandece nas trevas, e as trevas não a compreenderam." }
+  ]
+}

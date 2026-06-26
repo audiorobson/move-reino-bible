@@ -1,0 +1,401 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+// ─── Bíblia ───────────────────────────────────────────────────────────────────
+
+model BibleVersion {
+  id                  String       @id @default(cuid())
+  name                String
+  abbreviation        String       @unique
+  language            String
+  copyrightStatus     String
+  licenseType         String
+  licenseUrl          String?
+  sourceUrl           String?
+  isPublicDomain      Boolean      @default(false)
+  isCommercialAllowed Boolean      @default(false)
+  attributionRequired Boolean      @default(false)
+  notes               String?
+  verses              BibleVerse[]
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+}
+
+model BibleBook {
+  id         String         @id @default(cuid())
+  osisId     String         @unique
+  namePt     String
+  nameEn     String
+  testament  String
+  canonOrder Int
+  chapters   BibleChapter[]
+}
+
+model BibleChapter {
+  id     String    @id @default(cuid())
+  bookId String
+  book   BibleBook @relation(fields: [bookId], references: [id])
+  number Int
+
+  @@unique([bookId, number])
+}
+
+model BibleVerse {
+  id             String       @id @default(cuid())
+  versionId      String
+  version        BibleVersion @relation(fields: [versionId], references: [id])
+  bookId         String
+  chapter        Int
+  verse          Int
+  text           String
+  normalizedText String
+  footnotes      Json?
+  paragraphId    String?
+  poetryGroup    String?
+  createdAt      DateTime     @default(now())
+
+  @@unique([versionId, bookId, chapter, verse])
+  @@index([versionId, bookId, chapter, verse])
+  @@index([normalizedText])
+}
+
+// ─── Texto original ───────────────────────────────────────────────────────────
+
+model OriginalToken {
+  id                 String  @id @default(cuid())
+  testament          String
+  sourceText         String
+  sourceDataset      String?
+  bookId             String
+  chapter            Int
+  verse              Int
+  tokenOrder         Int
+  surfaceForm        String
+  lemma              String?
+  strongNumber       String?
+  extendedStrong     String?
+  morphologyCode     String?
+  morphologyExpanded String?
+  transliteration    String?
+  glossPt            String?
+  glossEn            String?
+
+  @@index([bookId, chapter, verse])
+  @@index([strongNumber])
+  @@index([extendedStrong])
+  @@index([lemma])
+  @@index([sourceDataset])
+}
+
+model VersificationMapping {
+  id              String @id @default(cuid())
+  sourceTradition String
+  targetTradition String
+  sourceBook      String
+  sourceChapter   Int
+  sourceVerse     Int
+  targetBook      String
+  targetChapter   Int
+  targetVerse     Int
+  sourceRef       String
+  targetRef       String
+  mappingType     String @default("exact")
+
+  @@unique([sourceTradition, targetTradition, sourceBook, sourceChapter, sourceVerse])
+  @@index([targetTradition, targetBook, targetChapter, targetVerse])
+  @@index([sourceBook, sourceChapter])
+}
+
+// ─── Léxico ───────────────────────────────────────────────────────────────────
+
+model LexiconEntry {
+  id                 String   @id @default(cuid())
+  language           String
+  strongNumber       String?
+  lemma              String
+  transliteration    String?
+  pronunciation      String?
+  shortDefinition    String
+  extendedDefinition String?
+  semanticDomain     String?
+  source             String
+  license            String
+  createdAt          DateTime @default(now())
+
+  @@index([strongNumber])
+  @@index([lemma])
+}
+
+// ─── Estudos ──────────────────────────────────────────────────────────────────
+
+model User {
+  id        String         @id @default(cuid())
+  email     String         @unique
+  name      String?
+  studies   StudySession[]
+  notes     UserNote[]
+  favorites UserFavorite[]
+  libraryNotes     LibraryNote[]
+  libraryFavorites LibraryFavorite[]
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model StudySession {
+  id           String       @id @default(cuid())
+  userId       String
+  user         User         @relation(fields: [userId], references: [id])
+  title        String
+  description  String?
+  passageRange String?
+  tags         String[]
+  blocks       StudyBlock[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model StudyBlock {
+  id            String       @id @default(cuid())
+  sessionId     String
+  session       StudySession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  type          String
+  content       Json
+  linkedVerses  Json?
+  linkedSources Json?
+  aiGenerated   Boolean      @default(false)
+  aiModel       String?
+  order         Int          @default(0)
+  createdAt     DateTime     @default(now())
+}
+
+model UserNote {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  bookId    String
+  chapter   Int
+  verse     Int
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, bookId, chapter, verse])
+}
+
+model UserFavorite {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  bookId    String
+  chapter   Int
+  verse     Int
+  createdAt DateTime @default(now())
+
+  @@unique([userId, bookId, chapter, verse])
+}
+
+model LibraryNote {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  libraryBookId String
+  chapterId     String
+  content       String
+  excerpt       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([userId, libraryBookId])
+  @@unique([userId, libraryBookId, chapterId])
+}
+
+model LibraryFavorite {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  libraryBookId String
+  chapterId     String
+  chapterTitle  String?
+  createdAt     DateTime @default(now())
+
+  @@unique([userId, libraryBookId, chapterId])
+  @@index([userId])
+}
+
+// ─── RAG ──────────────────────────────────────────────────────────────────────
+
+model RagDocument {
+  id               String     @id @default(cuid())
+  title            String
+  author           String?
+  tradition        String?
+  denomination     String?
+  century          String?
+  language         String
+  sourceUrl        String?
+  license          String
+  documentType     String
+  reliabilityLevel String
+  importedBy       String?
+  createdAt        DateTime   @default(now())
+  chunks           RagChunk[]
+}
+
+model RagChunk {
+  id           String                      @id @default(cuid())
+  documentId   String
+  document     RagDocument                 @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  chunkText    String
+  chunkOrder   Int
+  biblicalRefs Json?
+  doctrineTags String[]
+  citation     String?
+  embedding    Unsupported("vector(1536)")?
+  createdAt    DateTime                    @default(now())
+
+  @@index([documentId])
+}
+
+// ─── Licenciamento ────────────────────────────────────────────────────────────
+
+model ContentLicense {
+  id                    String   @id @default(cuid())
+  workName              String
+  author                String?
+  origin                String
+  sourceUrl             String?
+  licenseType           String
+  commercialAllowed     Boolean  @default(false)
+  redistributionAllowed Boolean  @default(false)
+  localStorageAllowed   Boolean  @default(true)
+  attributionRequired   Boolean  @default(false)
+  status                String   @default("LICENSE_UNKNOWN")
+  notes                 String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+// ─── Cadeias temáticas (Move Chain System) ────────────────────────────────────
+
+model ChainSource {
+  id            String           @id @default(cuid())
+  sourceKey     String           @unique
+  title         String
+  repositoryUrl String?
+  license       String?
+  notes         String?
+  importedAt    DateTime         @default(now())
+  topics        ChainTopic[]
+  chains        Chain[]
+  importLogs    ChainImportLog[]
+}
+
+model ChainTopic {
+  id              String            @id @default(cuid())
+  title           String
+  normalizedTitle String
+  parentId        String?
+  parent          ChainTopic?       @relation("TopicTree", fields: [parentId], references: [id])
+  children        ChainTopic[]      @relation("TopicTree")
+  description     String?
+  sourceKey       String
+  externalId      String?
+  chainId         String?           @unique
+  chain           Chain?            @relation(fields: [chainId], references: [id])
+  source          ChainSource       @relation(fields: [sourceKey], references: [sourceKey])
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  aliases         ChainTopicAlias[]
+  verses          ChainTopicVerse[]
+
+  @@index([normalizedTitle])
+  @@index([sourceKey])
+  @@index([parentId])
+}
+
+model ChainTopicAlias {
+  id              String     @id @default(cuid())
+  topicId         String
+  topic           ChainTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  alias           String
+  normalizedAlias String
+  sourceKey       String
+
+  @@index([normalizedAlias])
+  @@index([topicId])
+}
+
+model ChainTopicVerse {
+  id          String     @id @default(cuid())
+  topicId     String
+  topic       ChainTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  osisRef     String
+  book        String
+  chapter     Int
+  verseStart  Int
+  verseEnd    Int?
+  chainOrder  Int
+  sourceKey   String
+  note        String?
+  confidence  Float      @default(1)
+
+  @@index([topicId, chainOrder])
+  @@index([book, chapter, verseStart])
+}
+
+model Chain {
+  id              String      @id @default(cuid())
+  title           String
+  normalizedTitle String
+  description     String?
+  sourceKey       String
+  externalId      String?
+  source          ChainSource @relation(fields: [sourceKey], references: [sourceKey])
+  topic           ChainTopic?
+  nodes           ChainNode[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@index([normalizedTitle])
+  @@index([sourceKey])
+}
+
+model ChainNode {
+  id             String  @id @default(cuid())
+  chainId        String
+  chain          Chain   @relation(fields: [chainId], references: [id], onDelete: Cascade)
+  osisRef        String
+  book           String
+  chapter        Int
+  verseStart     Int
+  verseEnd       Int?
+  orderIndex     Int
+  note           String?
+  previousNodeId String?
+  nextNodeId     String?
+  sourceKey      String
+
+  @@index([chainId, orderIndex])
+}
+
+model ChainImportLog {
+  id               String      @id @default(cuid())
+  sourceKey        String
+  source           ChainSource @relation(fields: [sourceKey], references: [sourceKey])
+  status           String
+  totalTopics      Int         @default(0)
+  totalAliases     Int         @default(0)
+  totalTopicVerses Int         @default(0)
+  totalChains      Int         @default(0)
+  totalChainNodes  Int         @default(0)
+  errors           String?
+  importedAt       DateTime    @default(now())
+}

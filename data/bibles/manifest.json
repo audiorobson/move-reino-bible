@@ -1,0 +1,210 @@
+{
+  "version": "1.0",
+  "description": "Catálogo de fontes bíblicas do Move Reino Bible — importação automática e arquivos locais",
+  "helloaoBaseUrl": "https://bible.helloao.org/api",
+  "localDirectory": "data/bibles/local",
+  "sources": [
+    {
+      "type": "helloao",
+      "helloaoId": "por_blj",
+      "abbreviation": "BLIVRE",
+      "name": "Bíblia Livre",
+      "language": "pt-BR",
+      "licenseType": "LICENSE_OK_CC_BY",
+      "licenseUrl": "https://ebible.org/find/details.php?id=porbr2018",
+      "isPublicDomain": false,
+      "attributionRequired": true,
+      "autoImport": true,
+      "storageTier": "primary",
+      "enabled": true
+    },
+    {
+      "type": "helloao",
+      "helloaoId": "BSB",
+      "abbreviation": "BSB",
+      "name": "Berean Standard Bible",
+      "language": "en",
+      "licenseType": "LICENSE_OK_PUBLIC_DOMAIN",
+      "licenseUrl": "https://berean.bible/",
+      "isPublicDomain": true,
+      "attributionRequired": false,
+      "autoImport": true,
+      "storageTier": "primary",
+      "enabled": true
+    },
+    {
+      "type": "helloao",
+      "helloaoId": "ENGWEBP",
+      "abbreviation": "WEB",
+      "name": "World English Bible",
+      "language": "en",
+      "licenseType": "LICENSE_OK_PUBLIC_DOMAIN",
+      "licenseUrl": "https://worldenglish.bible/",
+      "isPublicDomain": true,
+      "attributionRequired": false,
+      "autoImport": true,
+      "storageTier": "primary",
+      "enabled": true
+    },
+    {
+      "type": "helloao",
+      "helloaoId": "eng_kjv",
+      "abbreviation": "KJV",
+      "name": "King James Version",
+      "language": "en",
+      "licenseType": "LICENSE_OK_PUBLIC_DOMAIN",
+      "licenseUrl": "https://kingjames.bible/",
+      "isPublicDomain": true,
+      "attributionRequired": false,
+      "autoImport": false,
+      "storageTier": "primary",
+      "enabled": true
+    },
+    {
+      "type": "helloao",
+      "helloaoId": "por_blt",
+      "abbreviation": "BLT",
+      "name": "Bíblia Livre Para Todos",
+      "language": "pt-BR",
+      "licenseType": "LICENSE_OK_CC_BY_SA",
+      "licenseUrl": "https://ebible.org/find/details.php?id=porblt",
+      "isPublicDomain": false,
+      "attributionRequired": true,
+      "autoImport": false,
+      "storageTier": "copyleft_isolated",
+      "enabled": false
+    },
+    {
+      "type": "helloao",
+      "helloaoId": "por_onbv",
+      "abbreviation": "ONBV",
+      "name": "Open Nova Bíblia Viva",
+      "language": "pt-BR",
+      "licenseType": "LICENSE_OK_CC_BY_SA",
+      "licenseUrl": "https://ebible.org/details.php?id=poronbv",
+      "isPublicDomain": false,
+      "attributionRequired": true,
+      "autoImport": false,
+      "storageTier": "copyleft_isolated",
+      "enabled": false
+    },
+    {
+      "type": "local",
+      "file": "ACF.json",
+      "enabled": true,
+      "description": "Almeida Corrigida Fiel",
+      "version": { "abbreviation": "ACF", "name": "Almeida Corrigida Fiel", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "ALM1911.json",
+      "enabled": true,
+      "description": "Almeida 1911",
+      "version": { "abbreviation": "ALM1911", "name": "Almeida 1911", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "ARA.json",
+      "enabled": true,
+      "description": "Almeida Revista e Atualizada",
+      "version": { "abbreviation": "ARA", "name": "Almeida Revista e Atualizada", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "ARC.json",
+      "enabled": true,
+      "description": "Almeida Revista e Corrigida",
+      "version": { "abbreviation": "ARC", "name": "Almeida Revista e Corrigida", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "AS21.json",
+      "enabled": true,
+      "description": "Almeida Século 21",
+      "version": { "abbreviation": "AS21", "name": "Almeida Século 21", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "BLIVRE.json",
+      "enabled": true,
+      "description": "Bíblia Livre (arquivo local)",
+      "version": { "abbreviation": "BLIVRE", "name": "Bíblia Livre", "language": "pt-BR", "licenseType": "LICENSE_OK_CC_BY", "attributionRequired": true, "isCommercialAllowed": true }
+    },
+    {
+      "type": "local",
+      "file": "JFAA.json",
+      "enabled": true,
+      "description": "João Ferreira de Almeida Atualizada",
+      "version": { "abbreviation": "JFAA", "name": "João Ferreira de Almeida Atualizada", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "KJA.json",
+      "enabled": true,
+      "description": "King James Atualizada",
+      "version": { "abbreviation": "KJA", "name": "King James Atualizada", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "KJF.json",
+      "enabled": true,
+      "description": "King James Fiel",
+      "version": { "abbreviation": "KJF", "name": "King James Fiel", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "MENS.json",
+      "enabled": true,
+      "description": "A Mensagem",
+      "version": { "abbreviation": "MENS", "name": "A Mensagem", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "NAA.json",
+      "enabled": true,
+      "description": "Nova Almeida Atualizada",
+      "version": { "abbreviation": "NAA", "name": "Nova Almeida Atualizada", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "NBV.json",
+      "enabled": true,
+      "description": "Nova Bíblia Viva",
+      "version": { "abbreviation": "NBV", "name": "Nova Bíblia Viva", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "NTLH.json",
+      "enabled": true,
+      "description": "Nova Tradução na Linguagem de Hoje",
+      "version": { "abbreviation": "NTLH", "name": "Nova Tradução na Linguagem de Hoje", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "NVI.json",
+      "enabled": true,
+      "description": "Nova Versão Internacional",
+      "version": { "abbreviation": "NVI", "name": "Nova Versão Internacional", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "TB.json",
+      "enabled": true,
+      "description": "Tradução Brasileira",
+      "version": { "abbreviation": "TB", "name": "Tradução Brasileira", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "VFL.json",
+      "enabled": true,
+      "description": "Versão Fiel",
+      "version": { "abbreviation": "VFL", "name": "Versão Fiel", "language": "pt-BR", "licenseType": "LICENSE_RESTRICTED_PERSONAL_USE", "attributionRequired": true }
+    },
+    {
+      "type": "local",
+      "file": "example-john1.json",
+      "enabled": false,
+      "description": "Exemplo de JSON local — ative para testar importação de arquivo"
+    }
+  ]
+}

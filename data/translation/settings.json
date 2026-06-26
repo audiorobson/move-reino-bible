@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "settings": {
+    "mode": "local",
+    "defaultProvider": "md_translator",
+    "defaultSourceLanguage": "en",
+    "cacheEnabled": true,
+    "glossaryEnabled": true,
+    "theologicalMode": true,
+    "providers": {}
+  }
+}

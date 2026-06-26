@@ -1,0 +1,4 @@
+# Confissão de Fé Batista de 1689
+## Capítulo 1: Capítulo 1 — Das Sagradas Escrituras
+
+As Sagradas Escrituras são a regra suficiente, certa e infalível de todo conhecimento, fé e obediência. Embora a luz da natureza e as obras da criação e da providência manifestem a bondade, sabedoria e poder de Deus, de modo a deixar os homens inescusáveis, não são suficientes para dar aquele conhecimento de Deus e de sua vontade necessário para a salvação. Portanto, aprouve ao Senhor, em diversas épocas e de diversas maneiras, revelar-se e declarar essa sua vontade aos seus servos; e depois, para preservar e propagar melhor a verdade e para estabelecer mais firmemente a Igreja contra a corrupção da carne e a malícia de Satanás e do mundo, pô-la por escrito, sendo isto o que torna as Sagradas Escrituras muito necessárias. Assim, sendo imediata e plenamente inspiradas por Deus, permanecem infalíveis e constituem a regra completa e suficiente para a fé e prática.
