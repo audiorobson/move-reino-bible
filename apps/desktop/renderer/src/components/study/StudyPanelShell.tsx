@@ -8,7 +8,7 @@ import { StudyEditor, linkedVersesFromBlock } from "./StudyEditor";
 import { StudyPendingQueue } from "./StudyPendingQueue";
 import { StudyBlockToolbar } from "./StudyBlockToolbar";
 import { StudyPrintDialog } from "./StudyPrintDialog";
-import { downloadTextFile, exportStudyToPlainText } from "../../lib/study-export";
+import { downloadTextFile, exportStudyToMarkdown, exportStudyToPlainText } from "../../lib/study-export";
 import { defaultStudyTitle } from "../../lib/study-utils";
 import type { VerseContext } from "../../lib/verse-context";
 
@@ -115,6 +115,13 @@ export function StudyPanelShell({ onClose, onDropVerse, showDropZone = true }: S
     downloadTextFile(`${safeName}.txt`, text);
   };
 
+  const handleExportMarkdown = () => {
+    if (!activeStudy) return;
+    const md = exportStudyToMarkdown(activeStudy);
+    const safeName = activeStudy.title.replace(/[^\w\s-áàâãéêíóôõúç]/gi, "").trim() || "estudo";
+    downloadTextFile(`${safeName}.md`, md, "text/markdown;charset=utf-8");
+  };
+
   const handlePrint = () => {
     if (!activeStudy?.blocks.length) return;
     setPrintOpen(true);
@@ -184,6 +191,11 @@ export function StudyPanelShell({ onClose, onDropVerse, showDropZone = true }: S
         </Button>
         <Button variant="secondary" title="Exportar TXT" onClick={handleExport} disabled={!activeStudy?.blocks.length}>
           <Download size={14} />
+          TXT
+        </Button>
+        <Button variant="secondary" title="Exportar Markdown" onClick={handleExportMarkdown} disabled={!activeStudy?.blocks.length}>
+          <Download size={14} />
+          MD
         </Button>
         <Button variant="gold" title="Visualizar estudo" onClick={handlePreview} disabled={!activeStudy?.blocks.length}>
           <Eye size={14} />

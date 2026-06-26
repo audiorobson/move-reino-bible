@@ -32,6 +32,8 @@
     "import:step:sample": "tsx scripts/import-step.ts --sample-john1",
     "import:versification": "tsx scripts/import-versification.ts",
     "import:chains": "tsx scripts/import-chains.ts",
+    "import:chains:torrey": "tsx scripts/import-chains.ts --torrey",
+    "import:chains:nave": "tsx scripts/import-chains.ts --nave",
     "index:bibles": "tsx scripts/index-bibles.ts",
     "security:audit": "pnpm audit --audit-level=moderate"
   },

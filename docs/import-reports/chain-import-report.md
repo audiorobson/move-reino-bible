@@ -1,6 +1,6 @@
 # Relatório de importação — Cadeias Bíblicas
 
-**Data:** 15/06/2026, 17:29:31
+**Data:** 26/06/2026, 16:15:19
 
 ## Torrey
 - Tópicos: 9251
@@ -9,4 +9,4 @@
 - Nós: 16732
 - Erros: 57
 
-## Total de tópicos no banco: 9251
+## Total de tópicos no banco: 18502

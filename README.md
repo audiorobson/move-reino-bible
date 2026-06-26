@@ -125,6 +125,8 @@ pnpm dev:desktop
 | `pnpm db:seed` | Seed (66 livros + João 1) |
 | `pnpm import:step:nt` | Importar NT grego (STEP TAGNT) |
 | `pnpm import:step:ot` | Importar AT hebraico (STEP TAHOT) |
+| `pnpm import:chains:torrey` | Importar cadeias temáticas Torrey |
+| `pnpm import:chains:nave` | Importar cadeias Nave |
 
 ## Segurança Electron
 
@@ -144,8 +146,8 @@ Nenhum conteúdo bíblico real é incluído sem licença rastreável. O seed usa
 Ver `Move_Reino_Bible_DEV_SPEC.md` para especificação completa.
 
 - **Fase 1:** ✅ MVP bíblico — leitura, busca, comparação, notas, favoritos
-- **Fase 2 (atual):** Originais STEP, Strong, busca morfológica, concordância por livro
-- **Fase 3:** Estudos completos, exportação
+- **Fase 2 (atual):** Originais STEP, Strong, busca morfológica, concordância por livro, grammar color interlinear
+- **Fase 3 (em progresso):** Exportação Markdown de estudos, cadeias temáticas Torrey
 - **Fase 4:** IA com provedores reais
 - **Fase 5:** RAG vetorial completo
 - **Fase 6:** SaaS, auth, sync

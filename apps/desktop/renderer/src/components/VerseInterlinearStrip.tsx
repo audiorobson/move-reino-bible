@@ -8,6 +8,7 @@ import {
   tokenGlossPt,
   type OriginalScript,
 } from "../lib/original-language";
+import { morphologyTokenClass, morphologyLabelPt } from "../lib/morphology-colors";
 import { useAppStore } from "../store/appStore";
 import { InterlinearTokenDetail } from "./InterlinearTokenDetail";
 
@@ -98,9 +99,13 @@ export function VerseInterlinearStrip({
           <button
             key={token.id}
             type="button"
-            className={`interlinear-token ${activeId === token.id ? "interlinear-token--active" : ""}`}
+            className={`interlinear-token ${morphologyTokenClass(token.morphologyCode)} ${activeId === token.id ? "interlinear-token--active" : ""}`}
             onClick={() => handleSelect(token)}
-            title="Clique para ver transliteração, gloss e Strong"
+            title={
+              token.morphologyCode
+                ? `${token.morphologyCode} · ${morphologyLabelPt(token.morphologyCode)}`
+                : "Clique para ver transliteração, gloss e Strong"
+            }
           >
             <span className={`interlinear-token__surface ${originalScriptClass(resolved)}`}>
               {token.surfaceForm}

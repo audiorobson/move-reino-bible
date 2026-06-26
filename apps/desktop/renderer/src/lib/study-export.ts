@@ -52,6 +52,21 @@ function blockPrintHtml(block: StudyBlockRecord): string {
   </section>`;
 }
 
+function blockMarkdown(block: StudyBlockRecord): string {
+  const label = blockTypeLabel(block.type);
+  const { heading, body } = blockSection(block);
+
+  if (block.type === "bible_text") {
+    return `### ${label}\n\n**${heading}**\n\n> ${body.replace(/\n/g, "\n> ")}\n`;
+  }
+
+  if (block.type === "theological_citation") {
+    return `### ${label}${heading ? `: ${heading}` : ""}\n\n${body}\n`;
+  }
+
+  return `### ${label}\n\n${body}\n`;
+}
+
 const PRINT_STYLES = `
   body { font-family: Georgia, "Times New Roman", serif; margin: 1.8cm; color: #1a1a1a; line-height: 1.65; background: #fff; }
   h1 { font-size: 1.5rem; color: #003A66; border-bottom: 3px solid #D1A058; padding-bottom: 0.4rem; margin: 0 0 0.5rem; }
@@ -95,6 +110,29 @@ export function exportStudyToPlainText(study: StudySessionRecord): string {
   return lines.join("\n");
 }
 
+export function exportStudyToMarkdown(study: StudySessionRecord): string {
+  const lines: string[] = [];
+  lines.push(`# ${study.title}`);
+  lines.push("");
+  if (study.passageRange) lines.push(`**Passagem:** ${study.passageRange}  `);
+  if (study.description) lines.push(`**Descrição:** ${study.description}  `);
+  lines.push(`**Exportado:** ${new Date().toLocaleString("pt-BR")}  `);
+  lines.push("");
+  lines.push("---");
+  lines.push("");
+
+  const sorted = [...study.blocks].sort((a, b) => a.order - b.order);
+  for (const block of sorted) {
+    lines.push(blockMarkdown(block));
+  }
+
+  lines.push("---");
+  lines.push("");
+  lines.push("*Gerado por Move Reino Bible*");
+
+  return lines.join("\n");
+}
+
 export function exportStudyToPrintHtml(study: StudySessionRecord): string {
   const sorted = [...study.blocks].sort((a, b) => a.order - b.order);
   const blocksHtml = sorted.map(blockPrintHtml).join("");
@@ -118,8 +156,8 @@ export function exportStudyToPrintHtml(study: StudySessionRecord): string {
 </html>`;
 }
 
-export function downloadTextFile(filename: string, content: string) {
-  const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+export function downloadTextFile(filename: string, content: string, mime = "text/plain;charset=utf-8") {
+  const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;

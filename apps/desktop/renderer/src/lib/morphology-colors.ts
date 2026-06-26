@@ -54,6 +54,11 @@ export function morphologyColorClass(code?: string | null): string {
   return `morph-badge--${classifyMorphology(code)}`;
 }
 
+export function morphologyTokenClass(code?: string | null): string {
+  const pos = classifyMorphology(code);
+  return pos === "other" ? "" : `interlinear-token--morph-${pos}`;
+}
+
 export function morphologyLabelPt(code?: string | null): string {
   const labels: Record<MorphologyPartOfSpeech, string> = {
     noun: "Substantivo",
